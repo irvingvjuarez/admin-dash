@@ -26,6 +26,7 @@ module.exports = {
       'contrast5': '#009541',
       'contrast5-clear': '#05FF72',
       'contrast5-strong': '#2B6A47',
+      'just-white': '#fff'
     },
     fontFamily: {
       primary: ['Inter', 'sans-serif']

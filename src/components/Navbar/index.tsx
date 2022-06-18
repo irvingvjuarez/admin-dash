@@ -1,10 +1,12 @@
+import { useState } from "react"
 import HamburgerIcon from "../../assets/icons/hamburger.svg"
 
 // components
 import { Sidebar } from "../Sidebar"
 
 const Navbar: React.FC = (): JSX.Element => {
-  const handleClick = () => console.log("Hi")
+  const [sidebarVisible, setSidebarVisible] = useState<boolean>(false)
+  const handleClick = () => setSidebarVisible(prev => !prev)
 
   return(
     <nav className="w-full bg-primary px-4 py-3 flex relative">
@@ -17,7 +19,9 @@ const Navbar: React.FC = (): JSX.Element => {
         <span className="text-contrast-clear font-bold">DASH</span>
       </h2>
 
-      <Sidebar />
+      <div className={`absolute top-full transition-transform duration-700 right-full ${sidebarVisible && "translate-x-full"}`}>
+        <Sidebar />
+      </div>
     </nav>
   )
 }

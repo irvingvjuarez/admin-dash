@@ -32,7 +32,7 @@ const Sidebar: React.FC = (): JSX.Element => {
   const { pathname } = useLocation()
 
   return(
-    <section className="absolute left-0 top-full bg-contrast-strong h-screen w-52">
+    <section className="bg-contrast-strong h-screen w-52">
       <div className="py-4 flex flex-col items-center">
         <span className="w-20 h-20 rounded-full text-3xl bg-contrast4 text-just-white text-bold tracking-wider grid place-content-center mb-1">IJ</span>
         <h3 className="text-lg text-just-white tracking-wider">Irving Juárez</h3>

@@ -20,7 +20,7 @@ const Navbar: React.FC = (): JSX.Element => {
       </h2>
 
       <div className={`absolute top-full transition-transform duration-700 right-full ${sidebarVisible && "translate-x-full"}`}>
-        <Sidebar />
+        <Sidebar toggle={handleClick} />
       </div>
     </nav>
   )

@@ -28,7 +28,11 @@ const paths = [
   }
 ]
 
-const Sidebar: React.FC = (): JSX.Element => {
+interface SidebarProps {
+  toggle?: () => void
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ toggle }): JSX.Element => {
   const { pathname } = useLocation()
 
   return(
@@ -41,7 +45,7 @@ const Sidebar: React.FC = (): JSX.Element => {
       <ul className="bg-contrast-strong">
         {paths.map(path => (
           <li key={path.id} className={`text-just-white text-thin tracking-wider py-3 px-4 ${pathname === "/" + path.url && "border-l-2 border-l-contrast-clear bg-primary"}`}>
-            <Link to={path.url}>
+            <Link to={path.url} onClick={toggle}>
               {path.title}
             </Link>
           </li>

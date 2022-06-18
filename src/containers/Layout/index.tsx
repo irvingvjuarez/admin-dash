@@ -7,10 +7,12 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
   return(
-    <header>
-      <Navbar />
+    <>
+      <header className="w-full bg-primary">
+        <Navbar />
+      </header>
       {children}
-    </header>
+    </>
   )
 }
 

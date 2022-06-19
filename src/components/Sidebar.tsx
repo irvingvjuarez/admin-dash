@@ -47,13 +47,12 @@ const Sidebar: React.FC<SidebarProps> = ({ toggle }): JSX.Element => {
 
       <ul className="bg-contrast-strong">
         {paths.map(path => (
-          <li
-            key={path.id}
-            className={`text-just-white text-thin tracking-wider py-3 px-4 ${setFocus("/" + path.url)}`}>
-            <Link to={path.url} onClick={toggle}>
+          <Link to={path.url} key={path.id} onClick={toggle}>
+            <li
+              className={`text-just-white text-thin tracking-wider py-3 px-4 ${setFocus("/" + path.url)}`}>
               {path.title}
-            </Link>
-          </li>
+            </li>
+          </Link>
         ))}
       </ul>
     </section>

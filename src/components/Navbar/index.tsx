@@ -10,7 +10,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
   return(
     <nav className="w-full bg-primary px-4 py-3 flex relative">
-      <button className="mr-3" onClick={handleClick}>
+      <button className="mr-3 lg:hidden" onClick={handleClick}>
         <img src={HamburgerIcon} alt="" />
       </button>
 
@@ -19,7 +19,7 @@ const Navbar: React.FC = (): JSX.Element => {
         <span className="text-contrast-clear font-bold">DASH</span>
       </h2>
 
-      <div className={`absolute top-full transition-transform duration-700 right-full ${sidebarVisible && "translate-x-full"}`}>
+      <div className={`lg:hidden absolute top-full transition-transform duration-700 right-full ${sidebarVisible && "translate-x-full"}`}>
         <Sidebar toggle={handleClick} />
       </div>
     </nav>

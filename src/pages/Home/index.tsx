@@ -1,6 +1,18 @@
+// data
+import { DATA } from "../../data"
+
+// components
+import { FactCard } from "../../components/FactCard"
+
 const Home: React.FC = (): JSX.Element => {
+  const { facts } = DATA
+
   return(
-    <h2 className="underline text-md">I am the Home page</h2>
+    <>
+      {facts.map(fact => (
+        <FactCard key={fact.id} {...fact} />
+      ))}
+    </>
   )
 }
 

@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
           <Sidebar />
         </section>
 
-        <section className="w-full">
+        <section className="w-full h-screen p-4">
           {children}
         </section>
       </section>

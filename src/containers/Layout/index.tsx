@@ -13,11 +13,14 @@ const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
         <Navbar />
       </header>
 
-      <section className="lg:flex">
+      <section className="bg-primary text-just-white lg:flex">
         <section className="hidden lg:block">
           <Sidebar />
         </section>
-        {children}
+
+        <section className="w-full">
+          {children}
+        </section>
       </section>
     </>
   )

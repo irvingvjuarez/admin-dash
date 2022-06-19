@@ -34,17 +34,22 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ toggle }): JSX.Element => {
   const { pathname } = useLocation()
+  const setFocus = (path: string) => path === pathname ? "onfocus" : "hover:bg-primary-clear-super"
 
   return(
     <section className="bg-contrast-strong h-screen w-52">
-      <div className="py-4 flex flex-col items-center">
+      <Link
+        to="profile" onClick={toggle}
+        className={`py-4 flex flex-col items-center cursor-pointer ${setFocus("/profile")}`}>
         <span className="w-20 h-20 rounded-full text-3xl bg-contrast4 text-just-white text-bold tracking-wider grid place-content-center mb-1">IJ</span>
         <h3 className="text-lg text-just-white tracking-wider">Irving Juárez</h3>
-      </div>
+      </Link>
 
       <ul className="bg-contrast-strong">
         {paths.map(path => (
-          <li key={path.id} className={`text-just-white text-thin tracking-wider py-3 px-4 ${pathname === "/" + path.url && "border-l-2 border-l-contrast-clear bg-primary"}`}>
+          <li
+            key={path.id}
+            className={`text-just-white text-thin tracking-wider py-3 px-4 ${setFocus("/" + path.url)}`}>
             <Link to={path.url} onClick={toggle}>
               {path.title}
             </Link>

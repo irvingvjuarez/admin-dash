@@ -9,7 +9,7 @@ const Navbar: React.FC = (): JSX.Element => {
   const handleClick = () => setSidebarVisible(prev => !prev)
 
   return(
-    <nav className="w-full bg-primary px-4 py-3 flex relative">
+    <nav className="w-full bg-primary-strong px-4 py-3 flex relative">
       <button className="mr-3 lg:hidden" onClick={handleClick}>
         <img src={HamburgerIcon} alt="" />
       </button>

@@ -4,10 +4,48 @@ import { MdAttachMoney } from "react-icons/md"
 import { IFact } from "./types"
 
 interface IData {
-  facts: IFact[]
+  facts: IFact[],
+  lastWeekEarnings: unknown[]
 }
 
 export const DATA: IData = {
+  lastWeekEarnings: [
+    {
+      name: "Sunday",
+      tea: 500,
+      iceCream: 700
+    },
+    {
+      name: "Monday",
+      tea: 240,
+      iceCream: 697
+    },
+    {
+      name: "Tuesday",
+      tea: 827,
+      iceCream: 392
+    },
+    {
+      name: "Wednesday",
+      tea: 987,
+      iceCream: 392
+    },
+    {
+      name: "Thursday",
+      tea: 762,
+      iceCream: 822
+    },
+    {
+      name: "Friday",
+      tea: 392,
+      iceCream: 1292
+    },
+    {
+      name: "Saturday",
+      tea: 938,
+      iceCream: 900
+    }
+  ],
   facts: [
     {
       id: 0,

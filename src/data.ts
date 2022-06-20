@@ -11,39 +11,39 @@ interface IData {
 export const DATA: IData = {
   lastWeekEarnings: [
     {
-      name: "Sunday",
+      name: "Sun",
       tea: 500,
       iceCream: 700
     },
     {
-      name: "Monday",
+      name: "Mon",
       tea: 240,
-      iceCream: 697
+      iceCream: 897
     },
     {
-      name: "Tuesday",
+      name: "Tue",
       tea: 827,
-      iceCream: 392
+      iceCream: 1292
     },
     {
-      name: "Wednesday",
+      name: "Wed",
       tea: 987,
-      iceCream: 392
+      iceCream: 1392
     },
     {
-      name: "Thursday",
+      name: "Thu",
       tea: 762,
       iceCream: 822
     },
     {
-      name: "Friday",
+      name: "Fri",
       tea: 392,
-      iceCream: 1292
+      iceCream: 692
     },
     {
-      name: "Saturday",
+      name: "Sat",
       tea: 938,
-      iceCream: 900
+      iceCream: 500
     }
   ],
   facts: [

@@ -3,7 +3,7 @@ import { DATA } from "../../data"
 
 // components
 import { FactCard } from "../../components/FactCard"
-import { ChartLine } from "../../charts/Line"
+import { ChartArea } from "../../charts/ChartArea"
 
 const Home: React.FC = (): JSX.Element => {
   const { facts } = DATA
@@ -18,7 +18,7 @@ const Home: React.FC = (): JSX.Element => {
 
       <section>
         <h2 className="text-xl mb-3 font-light tracking-wider">Key Performance Indicators</h2>
-        <ChartLine title="Last Week Earnings" />
+        <ChartArea title="Last Week Earnings" />
       </section>
     </>
   )

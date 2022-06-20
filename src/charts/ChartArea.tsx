@@ -13,7 +13,7 @@ interface LineProps {
   title: string
 }
 
-const ChartLine: React.FC<LineProps> = ({ title }): JSX.Element => {
+const ChartArea: React.FC<LineProps> = ({ title }): JSX.Element => {
   return(
     <section className="w-full lg:w-[720px] p-4 bg-primary-strong rounded-lg overflow-x-hidden">
       <h2 className="text-lg tracking-wide font-light">{title}</h2>
@@ -74,4 +74,4 @@ const ChartLine: React.FC<LineProps> = ({ title }): JSX.Element => {
   )
 }
 
-export { ChartLine }
+export { ChartArea }

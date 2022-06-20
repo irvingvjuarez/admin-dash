@@ -15,10 +15,10 @@ interface LineProps {
 
 const ChartArea: React.FC<LineProps> = ({ title }): JSX.Element => {
   return(
-    <section className="w-full lg:w-[720px] p-4 bg-primary-strong rounded-lg overflow-x-hidden">
-      <h2 className="text-lg tracking-wide font-light">{title}</h2>
+    <section className="chart lg:w-[720px]">
+      <h2 className="chart__title">{title}</h2>
 
-      <article className="scrollbar overflow-x-auto pb-4 pr-3">
+      <article className="chart__container">
         <AreaChart
           width={940}
           height={300}
@@ -53,6 +53,7 @@ const ChartArea: React.FC<LineProps> = ({ title }): JSX.Element => {
             wrapperStyle={{
               paddingBottom: "20px"
             }} />
+            
           <Area
             type="monotone"
             dataKey="tea"

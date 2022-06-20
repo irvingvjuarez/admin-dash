@@ -6,6 +6,19 @@
   @apply border-l-2 border-l-contrast-clear bg-primary lg:border-l-4;
 }
 
+.chart{
+  @apply w-full p-4 bg-primary-strong rounded-lg overflow-x-hidden mb-5;
+}
+
+.chart__title {
+  @apply text-lg tracking-wide font-light;
+}
+
+.chart__container {
+  @apply scrollbar overflow-x-auto pb-4 pr-3;
+}
+
+/* Scrollbar class */
 .scrollbar::-webkit-scrollbar {
   width: 20px;
   height: 7px;

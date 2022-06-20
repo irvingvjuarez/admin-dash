@@ -1,6 +1,6 @@
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -19,7 +19,7 @@ const ChartLine: React.FC<LineProps> = ({ title }): JSX.Element => {
       <h2 className="text-lg tracking-wide font-light">{title}</h2>
 
       <article className="scrollbar overflow-x-auto pb-4 pr-3">
-        <LineChart
+        <AreaChart
           width={940}
           height={300}
           data={DATA.lastWeekEarnings}
@@ -30,6 +30,18 @@ const ChartLine: React.FC<LineProps> = ({ title }): JSX.Element => {
             bottom: 0
           }}
         >
+          <defs>
+            <linearGradient id="iceCreamGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="15%" stopColor="#05FF72" stopOpacity={0.1}/>
+              <stop offset="85%" stopColor="#030303" stopOpacity={0.1}/>
+            </linearGradient>
+
+            <linearGradient id="teaGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="15%" stopColor="#F2AA73" stopOpacity={0.1}/>
+              <stop offset="85%" stopColor="#030303" stopOpacity={0.1}/>
+            </linearGradient>
+          </defs>
+
           <CartesianGrid strokeWidth="1px" vertical={false} stroke="#2C4459" />
           <XAxis dataKey="name" stroke="#fff" axisLine={false} />
           <YAxis stroke="#fff" axisLine={false} />
@@ -41,18 +53,22 @@ const ChartLine: React.FC<LineProps> = ({ title }): JSX.Element => {
             wrapperStyle={{
               paddingBottom: "20px"
             }} />
-          <Line
+          <Area
             type="monotone"
             dataKey="tea"
             stroke="#F2AA73"
             strokeWidth="2px"
+            fill="url(#teaGradient)"
+            fillOpacity={1}
           />
-          <Line
+          <Area
             type="monotone"
             dataKey="iceCream"
             stroke="#05FF72"
-            strokeWidth="2px" />
-        </LineChart>
+            strokeWidth="2px"
+            fill="url(#iceCreamGradient)"
+            fillOpacity={1} />
+        </AreaChart>
       </article>
     </section>
   )

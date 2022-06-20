@@ -43,8 +43,8 @@ const ChartArea: React.FC<LineProps> = ({ title }): JSX.Element => {
           </defs>
 
           <CartesianGrid strokeWidth="1px" vertical={false} stroke="#2C4459" />
-          <XAxis dataKey="name" stroke="#fff" axisLine={false} />
-          <YAxis stroke="#fff" axisLine={false} />
+          <XAxis dataKey="name" stroke="#fff" axisLine={false} dy={10} />
+          <YAxis stroke="#fff" axisLine={false} dx={-10} />
           <Tooltip />
           <Legend
             layout="horizontal"
@@ -53,7 +53,7 @@ const ChartArea: React.FC<LineProps> = ({ title }): JSX.Element => {
             wrapperStyle={{
               paddingBottom: "20px"
             }} />
-            
+
           <Area
             type="monotone"
             dataKey="tea"

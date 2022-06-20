@@ -19,8 +19,11 @@ const Home: React.FC = (): JSX.Element => {
 
       <section>
         <h2 className="text-xl mb-3 font-light tracking-wider">Key Performance Indicators</h2>
-        <ChartArea title="Last Week Earnings" />
-        <ChartStackedBar />
+
+        <article className="lg:grid grid-cols-[60%_37%] gap-[2%]">
+          <ChartArea title="Last Week Earnings" />
+          <ChartStackedBar />
+        </article>
       </section>
     </>
   )

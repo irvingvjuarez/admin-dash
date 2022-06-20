@@ -15,7 +15,7 @@ interface LineProps {
 
 const ChartArea: React.FC<LineProps> = ({ title }): JSX.Element => {
   return(
-    <section className="chart lg:w-[720px]">
+    <section className="chart lg:w-auto">
       <h2 className="chart__title">{title}</h2>
 
       <article className="chart__container">

@@ -18,7 +18,7 @@ const ChartLine: React.FC<LineProps> = ({ title }): JSX.Element => {
     <section className="w-full lg:w-[720px] p-4 bg-primary-strong rounded-lg overflow-x-hidden">
       <h2 className="text-lg tracking-wide font-light">{title}</h2>
 
-      <article className="overflow-x-auto pb-4 pr-3">
+      <article className="scrollbar overflow-x-auto pb-4 pr-3">
         <LineChart
           width={940}
           height={300}

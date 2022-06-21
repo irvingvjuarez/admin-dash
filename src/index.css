@@ -26,6 +26,14 @@
   @apply hidden md:block text-8xl text-contrast-strong mr-2 absolute;
 }
 
+.standard-day-forecast{
+  @apply bg-contrast-strong w-fit rounded-full py-5 px-4 flex flex-col items-center justify-center;
+}
+
+.overlapped-day-forecast{
+  @apply bg-just-white w-fit rounded-full py-5 px-4 flex flex-col items-center justify-center;
+}
+
 /* Scrollbar class */
 .scrollbar::-webkit-scrollbar {
   width: 9px;

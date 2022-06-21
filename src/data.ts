@@ -1,88 +1,100 @@
 import { HiUsers } from "react-icons/hi"
 import { BsCartPlusFill, BsFillCartCheckFill } from "react-icons/bs"
-import { TiWeatherStormy } from "react-icons/ti"
+import { TiWeatherStormy, TiWeatherShower, TiWeatherPartlySunny, TiWeatherWindyCloudy, TiWeatherSunny } from "react-icons/ti"
 import { MdAttachMoney } from "react-icons/md"
-import { IFact } from "./types"
 
 export const DATA = {
   todayWeather: [
     {
       id: 0,
       hour: "12 AM",
-      statusIcon: () => TiWeatherStormy,
-      temp: "16"
+      statusIcon: () => TiWeatherWindyCloudy,
+      temp: "16",
+      overlapping: false,
     },
     {
       id: 1,
       hour: "1 PM",
       statusIcon: () => TiWeatherStormy,
-      temp: "23"
+      temp: "23",
+      overlapping: false,
     },
     {
       id: 2,
       hour: "2 PM",
-      statusIcon: () => TiWeatherStormy,
-      temp: "31"
+      statusIcon: () => TiWeatherShower,
+      temp: "31",
+      overlapping: true,
     },
     {
       id: 3,
       hour: "3 PM",
       statusIcon: () => TiWeatherStormy,
-      temp: "23"
+      temp: "23",
+      overlapping: false,
     },
     {
       id: 4,
       hour: "4 PM",
-      statusIcon: () => TiWeatherStormy,
-      temp: "22"
+      statusIcon: () => TiWeatherPartlySunny,
+      temp: "22",
+      overlapping: false,
     },
     {
       id: 5,
       hour: "5 PM",
       statusIcon: () => TiWeatherStormy,
-      temp: "18"
+      temp: "18",
+      overlapping: false,
     },
     {
       id: 6,
       hour: "6 PM",
-      statusIcon: () => TiWeatherStormy,
-      temp: "14"
+      statusIcon: () => TiWeatherSunny,
+      temp: "14",
+      overlapping: false,
     },
     {
       id: 7,
       hour: "7 pM",
       statusIcon: () => TiWeatherStormy,
-      temp: "23"
+      temp: "23",
+      overlapping: false,
     },
     {
       id: 8,
       hour: "8 PM",
       statusIcon: () => TiWeatherStormy,
-      temp: "19"
+      temp: "19",
+      overlapping: false,
     },
     {
       id: 9,
       hour: "9 PM",
-      statusIcon: () => TiWeatherStormy,
-      temp: "25"
+      statusIcon: () => TiWeatherWindyCloudy,
+      temp: "25",
+      overlapping: false,
     },
     {
       id: 10,
       hour: "10 PM",
       statusIcon: () => TiWeatherStormy,
-      temp: "11"
+      temp: "11",
+      overlapping: false,
     },
     {
       id: 11,
       hour: "11 PM",
       statusIcon: () => TiWeatherStormy,
-      temp: "16"
+      temp: "16",
+      overlapping: false,
     },
     {
       id: 12,
       hour: "0 AM",
-      statusIcon: () => TiWeatherStormy,
-      temp: "16"
+      statusIcon: () => TiWeatherSunny,
+      temp: "16",
+      overlapping: false,
     }
   ],
   flavors: [

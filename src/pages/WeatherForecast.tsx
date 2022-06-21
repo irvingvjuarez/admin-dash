@@ -1,4 +1,5 @@
 import { BsCloudSun } from "react-icons/bs"
+import { OneDayForecast } from "../components/OneDayForecast"
 
 const WeatherForecast: React.FC = (): JSX.Element => {
   return(
@@ -29,6 +30,7 @@ const WeatherForecast: React.FC = (): JSX.Element => {
         <BsCloudSun className="floating-icon top-0 right-0 -translate-x-1/2" />
       </section>
       
+      <OneDayForecast />
     </>
   )
 }

@@ -27,8 +27,8 @@ const ChartPie: React.FC = (): JSX.Element => {
           <Pie
             data={data}
             dataKey="value"
-            innerRadius={55}
-            outerRadius={80}
+            innerRadius={70}
+            outerRadius={100}
             strokeWidth={0}
             paddingAngle={0}
             

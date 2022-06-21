@@ -3,7 +3,7 @@ import { DATA } from "../data"
 
 const ChartStackedBar: React.FC = (): JSX.Element => {
   return(
-    <section className="chart max-w-[450px]">
+    <section className="chart w-full">
       <h2 className="chart__title">Flavors performance</h2>
 
       <article className="chart__container scrollbar">

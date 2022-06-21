@@ -7,20 +7,24 @@
 }
 
 .chart{
-  @apply w-full p-4 bg-primary-strong rounded-lg overflow-x-hidden mb-5;
+  @apply w-full p-4 bg-primary-strong rounded-lg overflow-x-hidden mb-5 lg:flex lg:flex-col lg:items-center;
 }
 
 .chart__title {
-  @apply text-lg tracking-wide font-light;
+  @apply text-lg tracking-wide font-light lg:w-full text-start lg:mb-4;
 }
 
 .chart__container {
-  @apply scrollbar overflow-x-auto pb-4 pr-3;
+  @apply scrollbar overflow-x-auto pb-4 pr-3 lg:overflow-hidden;
+}
+
+.double-chart-grid{
+  @apply md:grid md:grid-cols-2 md:gap-4;
 }
 
 /* Scrollbar class */
 .scrollbar::-webkit-scrollbar {
-  width: 20px;
+  width: 9px;
   height: 7px;
 }
 

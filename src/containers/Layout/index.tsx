@@ -9,7 +9,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
   return(
     <>
-      <header className="w-full">
+      <header className="w-full relative z-[1]">
         <Navbar />
       </header>
 

@@ -5,6 +5,7 @@ import { DATA } from "../../data"
 import { FactCard } from "../../components/FactCard"
 import { ChartArea } from "../../charts/ChartArea"
 import { ChartStackedBar } from "../../charts/ChartStackedBar"
+import { ChartPie } from "../../charts/ChartPie"
 
 const Home: React.FC = (): JSX.Element => {
   const { facts } = DATA
@@ -23,6 +24,7 @@ const Home: React.FC = (): JSX.Element => {
         <article className="lg:grid grid-cols-[60%_37%] gap-[2%]">
           <ChartArea title="Last Week Earnings" />
           <ChartStackedBar />
+          <ChartPie />
         </article>
       </section>
     </>

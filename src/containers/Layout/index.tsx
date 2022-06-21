@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
           <Sidebar />
         </section>
 
-        <section className="w-full h-[93vh] p-4 pb-5 overflow-y-auto scrollbar">
+        <section className="w-full h-[94vh] p-4 pb-5 overflow-y-auto scrollbar">
           {children}
         </section>
       </section>

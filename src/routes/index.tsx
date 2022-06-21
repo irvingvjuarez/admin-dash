@@ -7,6 +7,10 @@ import { Consumers } from "../pages/Consumers"
 import { TaskManagement } from "../pages/TaskManagement"
 import { Calendar } from "../pages/Calendar"
 import { Profile } from "../pages/Profile"
+import { Users } from "../pages/Users"
+import { Orders } from "../pages/Orders"
+import { Sells } from "../pages/Sells"
+import { Deliveries } from "../pages/Deliveries"
 import { Layout } from "../containers/Layout"
 
 function App() {
@@ -21,6 +25,10 @@ function App() {
           <Route path="/management" element={<TaskManagement />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/sells/:time" element={<Sells />} />
+          <Route path="/deliveries/:time" element={<Deliveries />} />
         </Routes>
       </Layout>
     </BrowserRouter>

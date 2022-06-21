@@ -1,5 +1,6 @@
 import { IoIosArrowForward } from "react-icons/io"
 import { TiWeatherStormy } from "react-icons/ti"
+import { DATA } from "../data"
 
 const OneDayForecast: React.FC = (): JSX.Element => {
   return(
@@ -18,12 +19,17 @@ const OneDayForecast: React.FC = (): JSX.Element => {
         </div>
       </article>
 
-      <article>
-        <div className="bg-contrast-strong w-fit rounded-full py-3 px-4 flex flex-col items-center">
-          <span className="text-lg font-thin tracking-wide">12 AM</span>
-          <TiWeatherStormy className="text-4xl my-4 text-contrast-clear" />
-          <span className="font-thin text-lg tracking-wide">16°</span>
-        </div>
+      <article className="flex space-x-3 w-full overflow-x-auto pb-4 scrollbar lg:justify-center">
+        {DATA.todayWeather.map(item => {
+          const Component = item.statusIcon()
+          return(
+            <div key={item.id} className="bg-contrast-strong w-fit rounded-full py-5 px-4 flex flex-col items-center justify-center">
+              <span className="min-w-[50px] text-lg font-thin tracking-wide text-center">{item.hour}</span>
+              <Component className="text-4xl my-4 text-contrast-clear" />
+              <span className="font-thin text-lg tracking-wide">{item.temp}°</span>
+            </div>
+          )
+        })}
       </article>
     </section>
   )

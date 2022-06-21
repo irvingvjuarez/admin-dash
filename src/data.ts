@@ -1,15 +1,90 @@
 import { HiUsers } from "react-icons/hi"
 import { BsCartPlusFill, BsFillCartCheckFill } from "react-icons/bs"
+import { TiWeatherStormy } from "react-icons/ti"
 import { MdAttachMoney } from "react-icons/md"
 import { IFact } from "./types"
 
-interface IData {
-  facts: IFact[]
-  lastWeekEarnings: unknown[]
-  flavors: unknown[]
-}
-
-export const DATA: IData = {
+export const DATA = {
+  todayWeather: [
+    {
+      id: 0,
+      hour: "12 AM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "16"
+    },
+    {
+      id: 1,
+      hour: "1 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "23"
+    },
+    {
+      id: 2,
+      hour: "2 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "31"
+    },
+    {
+      id: 3,
+      hour: "3 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "23"
+    },
+    {
+      id: 4,
+      hour: "4 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "22"
+    },
+    {
+      id: 5,
+      hour: "5 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "18"
+    },
+    {
+      id: 6,
+      hour: "6 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "14"
+    },
+    {
+      id: 7,
+      hour: "7 pM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "23"
+    },
+    {
+      id: 8,
+      hour: "8 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "19"
+    },
+    {
+      id: 9,
+      hour: "9 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "25"
+    },
+    {
+      id: 10,
+      hour: "10 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "11"
+    },
+    {
+      id: 11,
+      hour: "11 PM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "16"
+    },
+    {
+      id: 12,
+      hour: "0 AM",
+      statusIcon: () => TiWeatherStormy,
+      temp: "16"
+    }
+  ],
   flavors: [
     {
       name: "Sun",

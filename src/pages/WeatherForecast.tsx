@@ -6,7 +6,7 @@ const WeatherForecast: React.FC = (): JSX.Element => {
     <>
       <h2 className="text-xl font-normal tracking-wider">Weather Forecast</h2>
 
-      <section className="w-fill px-2 py-5 flex flex-col items-center relative max-w-5xl my-0 mx-auto">
+      <section className="w-fill px-2 py-5 flex flex-col items-center relative max-w-5xl my-0 mx-auto mb-5">
         <article className="flex items-center justify-evenly">
           <BsCloudSun className="text-5xl text-contrast4-clear mr-2" />
 
@@ -25,7 +25,6 @@ const WeatherForecast: React.FC = (): JSX.Element => {
           Mexico City
         </span>
 
-        {/* <BsCloudSun className="text-5xl text-contrast-strong mr-2 aboslute top-0 right-0" /> */}
         <BsCloudSun className="floating-icon bottom-0 left-0 translate-x-full" />
         <BsCloudSun className="floating-icon top-0 right-0 -translate-x-1/2" />
       </section>

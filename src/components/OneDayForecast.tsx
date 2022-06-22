@@ -1,30 +1,38 @@
+import { useState } from "react"
 import { IoIosArrowForward } from "react-icons/io"
 import { DATA } from "../data"
 
+const Dot: React.FC = (): JSX.Element => <i className="absolute left-1/2 top-1/2 text-2xl">·</i>
+
 const OneDayForecast: React.FC = (): JSX.Element => {
+  const [weatherData, setWeatherData] = useState({ info: DATA.todayWeather, status: "today" })
   const onOverlapping = (validation: boolean) => {
     // item.overlapping is true
     if(validation) return "text-primary"
   }
+  const handleToday = () => setWeatherData({ info: DATA.todayWeather, status: "today" })
+  const handleTomorrow = () => setWeatherData({ info: DATA.tomorrowWeather, status: "tomorrow" })
 
   return(
     <section>
       <article className="w-full flex justify-between items-center mb-7">
         <div className="flex items-center text-lg">
-          <h2 className="mr-3 relative">
-            Today <i className="absolute left-1/2 top-1/2 text-2xl">·</i>
+          <h2 onClick={handleToday} className="mr-3 relative cursor-pointer hover:-translate-y-1">
+            Today {weatherData.status === "today" && <Dot />}
           </h2>
-          <h2>Tomorrow</h2>
+          <h2 onClick={handleTomorrow} className="cursor-pointer hover:-translate-y-1 relative">
+            Tomorrow {weatherData.status === "tomorrow" && <Dot />}
+          </h2>
         </div>
 
         <div className="flex items-center text-contrast-clear text-lg font-medium">
-          <h2>Next 7 days</h2>
+          <h2 className="cursor-pointer">Next 7 days</h2>
           <IoIosArrowForward />
         </div>
       </article>
 
       <article className="flex space-x-3 w-full overflow-x-auto pb-4 scrollbar lg:justify-center">
-        {DATA.todayWeather.map(item => {
+        {weatherData.info.map(item => {
           const Component = item.statusIcon()
           return(
             <div key={item.id} className={item.overlapping ? "overlapped-day-forecast" : "standard-day-forecast"}>

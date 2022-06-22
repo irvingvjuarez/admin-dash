@@ -1,5 +1,6 @@
 import { OneDayForecast } from "../components/OneDayForecast"
 import { TodayWeatherOverview } from "../components/TodayWeatherOverview"
+import { ChanceRain } from "../charts/ChanceRain"
 
 const WeatherForecast: React.FC = (): JSX.Element => {
   return(
@@ -8,6 +9,7 @@ const WeatherForecast: React.FC = (): JSX.Element => {
 
       <TodayWeatherOverview />
       <OneDayForecast />
+      <ChanceRain />
     </>
   )
 }

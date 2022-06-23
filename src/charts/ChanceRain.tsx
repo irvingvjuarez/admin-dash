@@ -1,4 +1,4 @@
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip } from "recharts"
+import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Cell } from "recharts"
 import { DATA } from "../data"
 
 const ChanceRain: React.FC = (): JSX.Element => {
@@ -21,8 +21,12 @@ const ChanceRain: React.FC = (): JSX.Element => {
           <CartesianGrid horizontal={false} vertical={false} />
           <XAxis axisLine={false} stroke="#fff" dy={10} dataKey="name" />
           <YAxis axisLine={false} stroke="#fff" dx={-10} />
-          <Tooltip />
-          <Bar dataKey="rain" fill="#484A69" barSize={20} radius={[20, 20, 20, 20]} />
+          <Tooltip cursor={false} />
+          <Bar dataKey="rain" fill="#484A69" barSize={20} radius={[20, 20, 20, 20]}>
+            {DATA.chanceOfRain.map(item => (
+              <Cell key={item.id} fill={item.overlapping ? "#F2AA73" : "#484A69"} />
+            ))}
+          </Bar>
         </BarChart>
       </article>
     </section>

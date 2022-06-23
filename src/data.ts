@@ -6,32 +6,46 @@ import { MdAttachMoney } from "react-icons/md"
 export const DATA = {
   chanceOfRain: [
     {
+      id: 0,
       name: "12 AM",
-      rain: 40
+      rain: 40,
+      overlapping: false
     },
     {
+      id: 1,
       name: "1 AM",
-      rain: 36
+      rain: 36,
+      overlapping: false
     },
     {
+      id: 2,
       name: "2 AM",
-      rain: 22
+      rain: 22,
+      overlapping: true
     },
     {
+      id: 3,
       name: "3 AM",
-      rain: 27
+      rain: 27,
+      overlapping: false
     },
     {
+      id: 4,
       name: "4 AM",
-      rain: 18
+      rain: 18,
+      overlapping: false
     },
     {
+      id: 5,
       name: "5 AM",
-      rain: 23
+      rain: 23,
+      overlapping: false
     },
     {
+      id: 6,
       name: "6 AM",
-      rain: 34
+      rain: 34,
+      overlapping: false
     }
   ],
   tomorrowWeather: [

@@ -6,16 +6,18 @@ interface ForecastDayButtonProps {
   validationFn?: () => boolean
   text: string,
   isArrowButton?: boolean
+  url?: string
 }
 
-const ForecastDayButton: React.FC<ForecastDayButtonProps> = ({ handleClick, validationFn, text, isArrowButton }): JSX.Element => {
+const ForecastDayButton: React.FC<ForecastDayButtonProps> = ({ handleClick, validationFn, text, isArrowButton, url }): JSX.Element => {
   return (
     <ForecastDayButtonContainer validator={isArrowButton || false}>
       <ForecastDayButtonTitle
         handleClick={handleClick}
         validator={isArrowButton || false}
         validationFn={validationFn}
-        text={text} />
+        text={text}
+        url={url} />
     </ForecastDayButtonContainer>
   )
 }

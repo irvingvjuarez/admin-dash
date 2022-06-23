@@ -28,7 +28,8 @@ const TodayTomorrowForecast: React.FC = (): JSX.Element => {
         <ForecastDayButton
           handleClick={() => console.log("Hello")}
           text="Next 7 days"
-          isArrowButton={true} />
+          isArrowButton={true}
+          url="/weather-next-seven-days" />
       </article>
 
       <article className="w-full pb-4 scrollbar overflow-x-auto relative max-w-6xl">

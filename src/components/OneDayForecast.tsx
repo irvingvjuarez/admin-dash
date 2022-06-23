@@ -14,7 +14,7 @@ const OneDayForecast: React.FC = (): JSX.Element => {
   const handleTomorrow = () => setWeatherData({ info: DATA.tomorrowWeather, status: "tomorrow" })
 
   return(
-    <section>
+    <section className="mb-9">
       <article className="w-full flex justify-between items-center mb-7">
         <div className="flex items-center text-lg">
           <h2 onClick={handleToday} className="mr-3 relative cursor-pointer hover:-translate-y-1">

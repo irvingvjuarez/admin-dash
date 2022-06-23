@@ -52,6 +52,24 @@
   border: 3px solid #f6f7ed;
 }
 
+/* Scrollbar main class */
+.scrollbar-main::-webkit-scrollbar {
+  width: 9px;
+  height: 7px;
+}
+
+.scrollbar-main::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #0F1022;
+  /* background: #f7f4ed; */
+}
+
+.scrollbar-main::-webkit-scrollbar-thumb {
+  background: #484A69;
+  border-radius: 100vh;
+  border: 3px solid #484A69;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

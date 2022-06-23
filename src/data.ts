@@ -4,6 +4,36 @@ import { TiWeatherStormy, TiWeatherShower, TiWeatherPartlySunny, TiWeatherWindyC
 import { MdAttachMoney } from "react-icons/md"
 
 export const DATA = {
+  chanceOfRain: [
+    {
+      name: "12 AM",
+      rain: 40
+    },
+    {
+      name: "1 AM",
+      rain: 36
+    },
+    {
+      name: "2 AM",
+      rain: 22
+    },
+    {
+      name: "3 AM",
+      rain: 27
+    },
+    {
+      name: "4 AM",
+      rain: 18
+    },
+    {
+      name: "5 AM",
+      rain: 23
+    },
+    {
+      name: "6 AM",
+      rain: 34
+    }
+  ],
   tomorrowWeather: [
     {
       id: 0,

@@ -14,7 +14,7 @@ const OneDayForecast: React.FC = (): JSX.Element => {
   const handleTomorrow = () => setWeatherData({ info: DATA.tomorrowWeather, status: "tomorrow" })
 
   return(
-    <section className="mb-9">
+    <section className="mb-9 flex items-center flex-col">
       <article className="w-full flex justify-between items-center mb-7">
         <div className="flex items-center text-lg">
           <h2 onClick={handleToday} className="mr-3 relative cursor-pointer hover:-translate-y-1">
@@ -31,17 +31,19 @@ const OneDayForecast: React.FC = (): JSX.Element => {
         </div>
       </article>
 
-      <article className="flex space-x-3 w-full overflow-x-auto pb-4 scrollbar lg:justify-center">
-        {weatherData.info.map(item => {
-          const Component = item.statusIcon()
-          return(
-            <div key={item.id} className={item.overlapping ? "overlapped-day-forecast" : "standard-day-forecast"}>
-              <span className={`min-w-[50px] text-lg font-thin tracking-wide text-center ${onOverlapping(item.overlapping)}`}>{item.hour}</span>
-              <Component className="text-4xl my-4 text-contrast-clear" />
-              <span className={`font-thin text-lg tracking-wide ${onOverlapping(item.overlapping)}`}>{item.temp}°</span>
-            </div>
-          )
-        })}
+      <article className="w-full pb-4 scrollbar overflow-x-auto">
+        <div className="flex space-x-3 w-fit mx-auto">
+          {weatherData.info.map(item => {
+            const Component = item.statusIcon()
+            return(
+              <div key={item.id} className={item.overlapping ? "overlapped-day-forecast" : "standard-day-forecast"}>
+                <span className={`min-w-[50px] text-lg font-thin tracking-wide text-center ${onOverlapping(item.overlapping)}`}>{item.hour}</span>
+                <Component className="text-4xl my-4 text-contrast-clear" />
+                <span className={`font-thin text-lg tracking-wide ${onOverlapping(item.overlapping)}`}>{item.temp}°</span>
+              </div>
+            )
+          })}
+        </div>
       </article>
     </section>
   )

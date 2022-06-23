@@ -25,10 +25,10 @@ const TodayTomorrowForecast: React.FC = (): JSX.Element => {
             text="Tomorrow" />
         </div>
 
-        <div className="flex items-center text-contrast-clear text-lg font-medium">
-          <h2 className="cursor-pointer">Next 7 days</h2>
-          <IoIosArrowForward />
-        </div>
+        <ForecastDayButton
+          handleClick={() => console.log("Hello")}
+          text="Next 7 days"
+          isArrowButton={true} />
       </article>
 
       <article className="w-full pb-4 scrollbar overflow-x-auto relative max-w-6xl">

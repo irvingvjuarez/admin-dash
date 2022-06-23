@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.moving{
+  transform: translateX(100%);
+}
+
 .onfocus{
   @apply border-l-2 border-l-contrast-clear bg-primary lg:border-l-4;
 }

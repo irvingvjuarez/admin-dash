@@ -1,25 +1,28 @@
 import { useState } from "react"
 import { IoIosArrowForward } from "react-icons/io"
 import { OneDayForecast } from "../components/OneDayForecast"
+import { ForecastDayButton } from "../components/ForecastDayButton"
 import { DATA } from "../data"
-
-const Dot: React.FC = (): JSX.Element => <i className="absolute left-1/2 top-1/2 text-2xl">·</i>
 
 const TodayTomorrowForecast: React.FC = (): JSX.Element => {
   const [weatherData, setWeatherData] = useState<"today" | "tomorrow">("today")
   const handleToday = () => setWeatherData("today")
   const handleTomorrow = () => setWeatherData("tomorrow")
+  const todayValidation = () => weatherData === "today" ? true : false;
+  const tomorrowValidation = () => weatherData === "tomorrow" ? true : false;
 
   return(
     <section className="mb-9 flex items-center flex-col">
       <article className="w-full flex justify-between items-center mb-7">
         <div className="flex items-center text-lg">
-          <h2 onClick={handleToday} className="mr-3 relative cursor-pointer hover:-translate-y-1">
-            Today {weatherData === "today" && <Dot />}
-          </h2>
-          <h2 onClick={handleTomorrow} className="cursor-pointer hover:-translate-y-1 relative">
-            Tomorrow {weatherData === "tomorrow" && <Dot />}
-          </h2>
+          <ForecastDayButton
+            handleClick={handleToday}
+            validationFn={todayValidation}
+            text="Today" />
+          <ForecastDayButton
+            handleClick={handleTomorrow}
+            validationFn={tomorrowValidation}
+            text="Tomorrow" />
         </div>
 
         <div className="flex items-center text-contrast-clear text-lg font-medium">

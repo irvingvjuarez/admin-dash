@@ -11,6 +11,7 @@ import { Users } from "../pages/Users"
 import { Orders } from "../pages/Orders"
 import { Sells } from "../pages/Sells"
 import { Deliveries } from "../pages/Deliveries"
+import { NextSevenDays } from "../pages/NextSevenDays"
 import { Layout } from "../containers/Layout"
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/users" element={<Users />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/weather-next-seven-days" element={<NextSevenDays />} />
           <Route path="/sells/:time" element={<Sells />} />
           <Route path="/deliveries/:time" element={<Deliveries />} />
         </Routes>

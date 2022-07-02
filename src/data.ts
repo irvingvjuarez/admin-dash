@@ -4,6 +4,15 @@ import { TiWeatherStormy, TiWeatherShower, TiWeatherPartlySunny, TiWeatherWindyC
 import { MdAttachMoney } from "react-icons/md"
 
 export const DATA = {
+  topProductSales: {
+    data: [
+      { name: "MacBook Pro", value: 400 },
+      { name: "iPhone", value: 300 },
+      { name: "iPad", value: 300 },
+      { name: "MacBook Air", value: 200 }
+    ],
+    colors: ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"],
+  },
   chanceOfRain: [
     {
       id: 0,

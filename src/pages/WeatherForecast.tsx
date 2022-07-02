@@ -1,16 +1,19 @@
 import { TodayTomorrowForecast } from "../containers/TodayTomorrowForecast"
 import { TodayWeatherOverview } from "../components/TodayWeatherOverview"
 import { ChanceRain } from "../charts/ChanceRain"
+import { SectionContainer } from "../containers/SectionContainer"
 
 const WeatherForecast: React.FC = (): JSX.Element => {
   return(
-    <>
-      <h2 className="text-xl font-normal tracking-wider">Weather Forecast</h2>
-
-      <TodayWeatherOverview />
-      <TodayTomorrowForecast />
-      <ChanceRain />
-    </>
+    <SectionContainer
+      title="Weather Forecast"
+      titleStrong={true}>
+      <>
+        <TodayWeatherOverview />
+        <TodayTomorrowForecast />
+        <ChanceRain />
+      </>
+    </SectionContainer>
   )
 }
 

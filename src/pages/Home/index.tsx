@@ -2,6 +2,7 @@
 import { DATA } from "../../data"
 
 // components
+import { SectionContainer } from "../../containers/SectionContainer"
 import { FactCard } from "../../components/FactCard"
 import { ChartArea } from "../../charts/ChartArea"
 import { ChartStackedBar } from "../../charts/ChartStackedBar"
@@ -18,15 +19,15 @@ const Home: React.FC = (): JSX.Element => {
         ))}
       </article>
 
-      <section>
-        <h2 className="text-xl mb-3 font-light tracking-wider">Key Performance Indicators</h2>
-
-        <ChartArea title="Last Week Earnings" />
-        <article className="double-chart-grid">
-          <ChartStackedBar />
-          <ChartPie />
-        </article>
-      </section>
+      <SectionContainer title="Key Performance Indicators">
+        <>
+          <ChartArea title="Last Week Earnings" />
+          <article className="double-chart-grid">
+            <ChartStackedBar />
+            <ChartPie />
+          </article>
+        </>
+      </SectionContainer>
     </>
   )
 }

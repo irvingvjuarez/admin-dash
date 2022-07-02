@@ -1,6 +1,13 @@
+import { SectionContainer } from "../containers/SectionContainer"
+
 const Users: React.FC = (): JSX.Element => {
   return(
-    <h2>I am the Users page</h2>
+    <SectionContainer
+      title="Users"
+      titleStrong={true}
+      subpage={true} >
+      <div></div>
+    </SectionContainer>
   )
 }
 

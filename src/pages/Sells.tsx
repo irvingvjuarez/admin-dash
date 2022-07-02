@@ -1,6 +1,13 @@
+import { SectionContainer } from "../containers/SectionContainer"
+
 const Sells: React.FC = (): JSX.Element => {
   return(
-    <h2>Sells</h2>
+    <SectionContainer
+      title="Sells"
+      titleStrong={true}
+      subpage={true} >
+      <div></div>
+    </SectionContainer>
   )
 }
 

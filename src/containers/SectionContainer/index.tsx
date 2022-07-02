@@ -5,6 +5,7 @@ interface SectionContainerProps {
   titleStrong?: boolean
   subpage?: boolean
   sectionClassName?: string
+  titleClassName?: string
 }
 
 const SectionContainer: React.FC<SectionContainerProps> = ({ 
@@ -12,13 +13,14 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   children,
   titleStrong,
   subpage,
-  sectionClassName
+  sectionClassName,
+  titleClassName
 }): JSX.Element => {
-  const titleClassName = titleStrong ? "font-normal" : "mb-3 font-light"
+  const title_classname = titleStrong ? "font-normal" : "mb-3 font-light"
   return(
     <section className={`nothing ${sectionClassName}`}>
       <Subpage isSubpage={subpage ?? false}>
-        <h2 className={`text-xl tracking-wider ${titleClassName}`}>
+        <h2 className={`text-xl tracking-wider w-full ${title_classname} ${titleClassName}`}>
           {title}
         </h2>
       </Subpage>

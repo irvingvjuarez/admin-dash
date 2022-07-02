@@ -1,16 +1,32 @@
-import { TodayTomorrowForecast } from "../containers/TodayTomorrowForecast"
-import { TodayWeatherOverview } from "../components/TodayWeatherOverview"
+import { WeatherTemp } from "../containers/WeatherTemp"
+import { WeatherHero } from "../components/WeatherHero"
 import { Tabs } from "../components/Tabs"
 import { ChanceRain } from "../charts/ChanceRain"
 import { SectionContainer } from "../containers/SectionContainer"
+import { useState } from "react"
+import { DATA } from "../data"
 
 const WeatherForecast: React.FC = (): JSX.Element => {
+  const [weatherData, setWeatherData] = useState({
+    data: DATA.todayWeather,
+    day: "Today"
+  })
+  const { city, current_temp, forecast_temp } = weatherData.data
+
   const tabs = [
     {
-      title: "Today"
+      title: "Today",
+      callback: () => setWeatherData({
+        data: DATA.todayWeather,
+        day: "Today"
+      })
     },
     {
-      title: "Tomororow"
+      title: "Tomorrow",
+      callback: () => setWeatherData({
+        data: DATA.tomorrowWeather,
+        day: "Tomorrow"
+      })
     },
     {
       title: "Next 7 days",
@@ -21,11 +37,14 @@ const WeatherForecast: React.FC = (): JSX.Element => {
   return(
     <SectionContainer
       title="Weather Forecast"
-      titleStrong={true}>
+      titleStrong={true} >
       <>
-        <Tabs items={tabs} />
-        <TodayWeatherOverview />
-        <TodayTomorrowForecast />
+        <Tabs items={tabs} focusOn={weatherData.day} />
+        <WeatherHero
+          city={city}
+          temp={current_temp} />
+        <WeatherTemp 
+          weatherData={forecast_temp} />
         <ChanceRain />
       </>
     </SectionContainer>

@@ -6,6 +6,11 @@
   transform: translateX(100%);
 }
 
+.tab-focus{
+  border-bottom: 3px solid transparent;
+  @apply border-b-contrast-clear
+}
+
 .onfocus{
   @apply border-l-2 border-l-contrast-clear bg-primary lg:border-l-4;
 }

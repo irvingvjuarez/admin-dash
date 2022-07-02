@@ -1,15 +1,20 @@
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Cell } from "recharts"
 import { ChartContainer } from "./ChartContainer"
 import { DATA } from "../data"
+import { ChartContainerConfig } from "./ChartContainer/types"
 
 const ChanceRain: React.FC = (): JSX.Element => {
+  const chartConfig = {
+    title: "Chance of rain",
+    type: "full",
+    scrollbar: true,
+    titleClassName: "mb-5",
+    containerClassName: "md:mx-auto",
+  }
+
   return(
     <ChartContainer
-      title="Chance of rain"
-      type="full"
-      scrollbar={true}
-      titleClassName="mb-5"
-      containerClassName="md:mx-auto">
+      config={chartConfig as ChartContainerConfig}>
       <BarChart
         width={600}
         height={300}

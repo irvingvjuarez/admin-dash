@@ -1,10 +1,18 @@
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from "recharts"
 import { ChartContainer } from "./ChartContainer"
 import { DATA } from "../data"
+import { ChartContainerConfig } from "./ChartContainer/types"
 
 const ChartStackedBar: React.FC = (): JSX.Element => {
+  const chartConfig = {
+    title: "Flavors performance",
+    type: "full",
+    scrollbar: true
+  }
+
   return(
-    <ChartContainer title="Flavors performance" type="full" scrollbar={true}>
+    <ChartContainer
+      config={chartConfig as ChartContainerConfig}>
       <BarChart
         width={400}
         height={300}

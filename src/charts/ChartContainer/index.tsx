@@ -1,50 +1,21 @@
+import { ChartContainerConfig } from "./types"
+import { getArticleClass, getTitleClass, getWrapperClass } from "./utils"
+
 interface ChartContainerProps {
-  title: string
+  config: ChartContainerConfig
   children: JSX.Element
-  type?: "full" | "flex"
-  titleClassName?: string
-  wrapperClassName?: string
-  containerClassName?: string
-  scrollbar?: boolean
 }
 
-const ChartContainer: React.FC<ChartContainerProps> = ({ 
-  title,
-  children,
-  type,
-  titleClassName,
-  wrapperClassName,
-  containerClassName,
-  scrollbar
-}): JSX.Element => {
-  const getArticleClass = () => {
-    let classname = "chart__container"
-    if(scrollbar) classname += " scrollbar"
-    if(containerClassName) classname += ` ${containerClassName}`
-    return classname
-  }
-
-  const getWrapperClass = () => {
-    let classname = "chart"
-    if(type === "full") classname += " w-full"
-    if(type === "flex") classname += " flex flex-col items-center"
-    if(wrapperClassName) classname += ` ${wrapperClassName}`
-    return classname
-  }
-
-  const getTitleClass = () => {
-    let classname = "chart__title w-full text-start"
-    if(titleClassName) classname += ` ${titleClassName}`
-    return classname
-  }
+const ChartContainer: React.FC<ChartContainerProps> = ({ config, children }): JSX.Element => {
+  const { title } = config
 
   return(
-    <section className={getWrapperClass()}>
-      <h2 className={getTitleClass()}>
+    <section className={getWrapperClass(config)}>
+      <h2 className={getTitleClass(config)}>
         {title}
       </h2>
 
-      <article className={getArticleClass()}>
+      <article className={getArticleClass(config)}>
         {children}
       </article>
     </section>

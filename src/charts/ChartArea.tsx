@@ -15,8 +15,13 @@ interface LineProps {
 }
 
 const ChartArea: React.FC<LineProps> = ({ title }): JSX.Element => {
+  const chartConfig = {
+    title,
+    wrapperClassName: "lg:w-auto"
+  }
+  
   return(
-    <ChartContainer title={title} wrapperClassName="lg:w-auto">
+    <ChartContainer config={chartConfig}>
       <AreaChart
         width={940}
         height={300}

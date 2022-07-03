@@ -12,7 +12,7 @@ const WeatherTemp: React.FC<WeatherTempProps> = ({
     <SectionContainer
       title="Temperature over next 24 hrs"
       sectionClassName="mb-9 flex items-center flex-col" >
-      <article className="w-full pb-4 scrollbar overflow-x-auto relative max-w-6xl">
+      <article className="w-full pb-4 scrollbar overflow-x-auto relative">
         <OneDayForecast data={weatherData} />
       </article>
     </SectionContainer>

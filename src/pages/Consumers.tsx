@@ -1,6 +1,16 @@
+import { SectionContainer } from "../containers/SectionContainer"
+import { ConsumersView } from "../components/ConsumersView"
+
 const Consumers: React.FC = (): JSX.Element => {
   return(
-    <h2>Consumers</h2>
+    <SectionContainer
+      title="Consumers"
+      titleStrong={true}
+      titleClassName="mb-3" >
+      
+      <ConsumersView />
+
+    </SectionContainer>
   )
 }
 

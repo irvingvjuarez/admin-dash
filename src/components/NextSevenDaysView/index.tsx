@@ -9,7 +9,7 @@ const NextSevenDaysView = () => {
         {nextSevenDays.map(day => {
           const IconComponent = day.icon()
           return(
-            <li className="flex items-center justify-between py-2 hover:bg-primary-clear-super md:px-1">
+            <li key={day.id} className="flex items-center justify-between py-2 md:px-1">
               <h2 className="w-[90px] text-lg md:text-xl flex">
                 {day.day}
               </h2>

@@ -4,6 +4,32 @@ import { TiWeatherStormy, TiWeatherShower, TiWeatherPartlySunny, TiWeatherWindyC
 import { MdAttachMoney } from "react-icons/md"
 
 export const DATA = {
+  consumers: [
+    {
+      name: "Adolf Hitler",
+      status: "Pending",
+      message: "Some non-sense text telling me something I don't want to actually listen to...",
+      color: "bg-contrast"
+    },
+    {
+      name: "Batman Wayne",
+      status: "Done",
+      message: "Some non-sense text telling me something I don't want to actually listen to...",
+      color: "bg-contrast2"
+    },
+    {
+      name: "Pato Pascual",
+      status: "Broken",
+      message: "Some non-sense text telling me something I don't want to actually listen to...",
+      color: "bg-contrast3"
+    },
+    {
+      name: "John Doe",
+      status: "Done",
+      message: "Some non-sense text telling me something I don't want to actually listen to...",
+      color: "bg-contrast4"
+    }
+  ],
   nextSevenDays: [
     {
       id: 0,
@@ -157,70 +183,70 @@ export const DATA = {
       {
         id: 3,
         hour: "4 AM",
-        statusIcon: () => TiWeatherStormy,
+        statusIcon: () => TiWeatherPartlySunny,
         temp: "23",
         overlapping: false,
       },
       {
         id: 4,
         hour: "5 AM",
-        statusIcon: () => TiWeatherPartlySunny,
+        statusIcon: () => TiWeatherSunny,
         temp: "22",
         overlapping: false,
       },
       {
         id: 5,
         hour: "6 AM",
-        statusIcon: () => TiWeatherStormy,
+        statusIcon: () => TiWeatherPartlySunny,
         temp: "18",
         overlapping: false,
       },
       {
         id: 6,
         hour: "7 AM",
-        statusIcon: () => TiWeatherSunny,
+        statusIcon: () => TiWeatherStormy,
         temp: "14",
         overlapping: false,
       },
       {
         id: 7,
         hour: "8 AM",
-        statusIcon: () => TiWeatherStormy,
+        statusIcon: () => TiWeatherWindyCloudy,
         temp: "23",
         overlapping: false,
       },
       {
         id: 8,
         hour: "9 AM",
-        statusIcon: () => TiWeatherStormy,
+        statusIcon: () => TiWeatherShower,
         temp: "19",
         overlapping: false,
       },
       {
         id: 9,
         hour: "10 AM",
-        statusIcon: () => TiWeatherWindyCloudy,
+        statusIcon: () => TiWeatherSunny,
         temp: "25",
         overlapping: false,
       },
       {
         id: 10,
         hour: "11 AM",
-        statusIcon: () => TiWeatherStormy,
+        statusIcon: () => TiWeatherSunny,
         temp: "11",
         overlapping: false,
       },
       {
         id: 11,
         hour: "12 AM",
-        statusIcon: () => TiWeatherStormy,
+        statusIcon: () => TiWeatherWindyCloudy,
         temp: "16",
         overlapping: false,
       },
       {
         id: 12,
         hour: "1 PM",
-        statusIcon: () => TiWeatherSunny,
+        statusIcon: () => TiWeatherPartlySunny,
         temp: "16",
         overlapping: false,
       }

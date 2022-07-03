@@ -1,5 +1,6 @@
 import { SectionContainer } from "../../containers/SectionContainer"
 import { WeatherCard } from "../../components/WeatherCard"
+import { NextSevenDaysView } from "../../components/NextSevenDaysView"
 
 const NextSevenDays: React.FC = (): JSX.Element => {
   return(
@@ -7,7 +8,10 @@ const NextSevenDays: React.FC = (): JSX.Element => {
       title="Weather Forecast in next 7 days"
       titleStrong={true}
       subpage={true} >
-      <WeatherCard />
+      <>
+        <WeatherCard />
+        <NextSevenDaysView />
+      </>
     </SectionContainer>
   )
 }

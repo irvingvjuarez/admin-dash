@@ -4,6 +4,78 @@ import { TiWeatherStormy, TiWeatherShower, TiWeatherPartlySunny, TiWeatherWindyC
 import { MdAttachMoney } from "react-icons/md"
 
 export const DATA = {
+  nextSevenDays: [
+    {
+      id: 0,
+      day: "Monday",
+      temp: {
+        max: "34",
+        min: "24"
+      },
+      icon: () => TiWeatherSunny,
+      rain: "32"
+    },
+    {
+      id: 1,
+      day: "Tuesday",
+      temp: {
+        max: "23",
+        min: "12"
+      },
+      icon: () => TiWeatherPartlySunny,
+      rain: "21"
+    },
+    {
+      id: 2,
+      day: "Wednesday",
+      temp: {
+        max: "27",
+        min: "21"
+      },
+      icon: () => TiWeatherWindyCloudy,
+      rain: "12"
+    },
+    {
+      id: 3,
+      day: "Thursday",
+      temp: {
+        max: "29",
+        min: "14"
+      },
+      icon: () => TiWeatherSunny,
+      rain: "98"
+    },
+    {
+      id: 4,
+      day: "Friday",
+      temp: {
+        max: "25",
+        min: "12"
+      },
+      icon: () => TiWeatherStormy,
+      rain: "43"
+    },
+    {
+      id: 5,
+      day: "Saturday",
+      temp: {
+        max: "12",
+        min: "10"
+      },
+      icon: () => TiWeatherShower,
+      rain: "15"
+    },
+    {
+      id: 6,
+      day: "Sunday",
+      temp: {
+        max: "27",
+        min: "20"
+      },
+      icon: () => TiWeatherSunny,
+      rain: "52"
+    }
+  ],
   topProductSales: {
     data: [
       { name: "MacBook Pro", value: 400 },

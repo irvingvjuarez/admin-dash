@@ -1,4 +1,6 @@
 import { BsCloudSun } from "react-icons/bs"
+import { WeatherDate } from "../WeatherDate"
+import { WeatherTemp } from "../WeatherTemp"
 
 interface WeatherHeroProps {
   city: string
@@ -11,18 +13,9 @@ const WeatherHero: React.FC<WeatherHeroProps> = ({
 }): JSX.Element => {
   return(
     <section className="w-fill px-2 py-5 flex flex-col items-center relative max-w-5xl my-0 mx-auto mb-7">
-      <article className="flex items-center justify-evenly">
-        <BsCloudSun className="text-5xl text-contrast4-clear mr-2" />
+      <WeatherDate />
 
-        <div>
-          <h2 className="text-3xl tracking-wider font-medium">Today</h2>
-          <span className="tracking-wider text-lg">Thu, 18</span>
-        </div>
-      </article>
-
-      <h2 className="block py-7 tracking-widest text-8xl font-thin relative">
-        {temp} <span className="absolute">°</span>
-      </h2>
+      <WeatherTemp temp={temp} />
 
       <span className="block rounded-lg border-contrast-strong px-8  py-1 border-2">
         {city}

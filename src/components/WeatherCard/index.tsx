@@ -1,9 +1,14 @@
 import { CardContainer } from "../CardContainer"
+import { WeatherDate } from "../WeatherDate"
+import { WeatherTemp } from "../WeatherTemp"
 
 const WeatherCard = () => {
   return(
     <CardContainer>
-      <h2>Hi</h2>
+      <>
+        <WeatherDate />
+        <WeatherTemp temp={"12"} />
+      </>
     </CardContainer>
   )
 }

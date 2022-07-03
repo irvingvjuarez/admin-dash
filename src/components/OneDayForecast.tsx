@@ -1,18 +1,12 @@
 import { useState } from "react"
 
 interface OneDayForecastProps {
-  data: any[],
-  isSlider?: boolean,
-  isTransited?: boolean
+  data: any[]
 }
 
-const OneDayForecast: React.FC<OneDayForecastProps> = ({ data, isSlider, isTransited }): JSX.Element => {
+const OneDayForecast: React.FC<OneDayForecastProps> = ({ data }): JSX.Element => {
   return(
-    <div className={
-        `flex space-x-3 w-fit mx-auto bg-primary
-        ${isSlider && "absolute transition-all duration-[800ms] ease-in-out"}
-        ${isTransited && "moving"}`
-      }>
+    <div className="flex space-x-3 w-fit mx-auto bg-primary">
       {data.map(item => {
         const Component = item.statusIcon()
         return(

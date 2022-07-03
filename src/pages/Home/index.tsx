@@ -3,7 +3,7 @@ import { DATA } from "../../data"
 
 // components
 import { SectionContainer } from "../../containers/SectionContainer"
-import { FactCard } from "../../components/FactCard"
+import { SubpageCard } from "../../components/SubpageCard"
 import { ChartArea } from "../../charts/ChartArea"
 import { ChartStackedBar } from "../../charts/ChartStackedBar"
 import { ChartPie } from "../../charts/ChartPie"
@@ -15,7 +15,7 @@ const Home: React.FC = (): JSX.Element => {
     <>
       <article className="lg:grid grid-cols-4 gap-3 mb-3">
         {facts.map(fact => (
-          <FactCard key={fact.id} {...fact} />
+          <SubpageCard key={fact.id} {...fact} />
         ))}
       </article>
 

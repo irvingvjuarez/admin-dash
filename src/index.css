@@ -40,7 +40,7 @@
 }
 
 .overlapped-day-forecast{
-  @apply bg-just-white w-fit rounded-full py-5 px-4 flex flex-col items-center justify-center;
+  @apply bg-just-white w-fit rounded-full py-5 px-4 flex flex-col items-center justify-center text-primary-clear;
 }
 
 /* Scrollbar class */

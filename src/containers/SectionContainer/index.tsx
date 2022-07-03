@@ -16,7 +16,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   sectionClassName,
   titleClassName
 }): JSX.Element => {
-  const title_classname = titleStrong ? "font-normal" : "mb-3 font-light"
+  const title_classname = titleStrong ? "font-normal" : "font-light"
   return(
     <section className={`nothing ${sectionClassName}`}>
       <Subpage isSubpage={subpage ?? false}>

@@ -4,10 +4,12 @@ import { WeatherTemp } from "../WeatherTemp"
 
 const WeatherCard = () => {
   return(
-    <CardContainer>
+    <CardContainer
+      type="flex"
+      justify="evenly" >
       <>
-        <WeatherDate />
-        <WeatherTemp temp={"12"} />
+        <WeatherDate titleSize="text-lg" dateSize="text-md" />
+        <WeatherTemp temp={"12"} titleSize="text-6xl" />
       </>
     </CardContainer>
   )

@@ -4,21 +4,12 @@ import { useLocation } from "react-router-dom"
 import { ConsumerItem } from "../../components/ConsumerItem"
 import { SectionContainer } from "../../containers/SectionContainer"
 import { DATA } from "../../data"
+import { getNameFromPath, handleSubmit } from "./utils"
 
 const Chat = () => {
   const { pathname } = useLocation()
-  const getNameFromPath = (path: string) => {
-    const nameMatches = path.match(/[A-z\%0-9]+$/i) as RegExpMatchArray
-    const match = nameMatches[0]
-    return decodeURI(match)
-  }
   const consumer = DATA.consumers.find(consumer => consumer.name === getNameFromPath(pathname))
   const inputRef = useRef<null | HTMLInputElement>(null)
-
-  const handleSubmit = (evt: React.FormEvent<HTMLButtonElement>) => {
-    evt.preventDefault()
-    console.log(inputRef.current?.value)
-  }
 
   return(
     <SectionContainer
@@ -27,6 +18,7 @@ const Chat = () => {
       sectionClassName="h-full relative" >
       <>
         <div>
+          {/* @ts-ignore */}
           <ConsumerItem {...consumer} type="inbox" />
         </div>
 
@@ -36,7 +28,7 @@ const Chat = () => {
             placeholder="Send a message..."
             className="w-full bg-[transparent] text-lg p-1 outline-none"
             ref={inputRef} />
-          <button onClick={handleSubmit}>
+          <button onClick={(evt) => handleSubmit(evt, inputRef)}>
             <IoMdSend className="text-2xl" />
           </button>
         </form>

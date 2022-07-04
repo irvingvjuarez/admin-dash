@@ -3,11 +3,3 @@ export const getNameFromPath = (path: string) => {
   const match = nameMatches[0]
   return decodeURI(match)
 }
-
-export const handleSubmit = (
-  evt: React.FormEvent<HTMLButtonElement>,
-  inputRef: React.MutableRefObject<HTMLInputElement | null>
-) => {
-  evt.preventDefault()
-  console.log(inputRef.current?.value)
-}

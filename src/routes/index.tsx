@@ -12,7 +12,7 @@ import { Orders } from "../pages/Orders"
 import { Sells } from "../pages/Sells"
 import { Deliveries } from "../pages/Deliveries"
 import { NextSevenDays } from "../pages/NextSevenDays"
-import { Consumer } from "../pages/Consumer"
+import { Chat } from "../pages/Chat"
 import { Layout } from "../containers/Layout"
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
           <Route path="/weather-next-seven-days" element={<NextSevenDays />} />
           <Route path="/sells/:time" element={<Sells />} />
           <Route path="/deliveries/:time" element={<Deliveries />} />
-          <Route path="/consumer/:name" element={<Consumer />} />
+          <Route path="/chat/:name" element={<Chat />} />
         </Routes>
       </Layout>
     </BrowserRouter>

@@ -5,6 +5,7 @@ interface ConsumerItemProps {
   color: string
   message: string
   status: string
+  lastConnection: string
   type?: "standard" | "inbox"
 }
 
@@ -13,6 +14,7 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
   color,
   message,
   status,
+  lastConnection,
   type = "standard"
 }) => {
   const getStatusColor = (status: string) => {
@@ -28,7 +30,7 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
   }
 
   return(
-    <LinkWrapper url={`/consumer/${name}`}>
+    <LinkWrapper url={`/chat/${name}`}>
       <div className="flex mb-2">
         <div className={`flex-none mr-2 w-[50px] h-[50px] rounded-full ${color} grid place-content-center text-xl`}>
           {getConsumerInitials(name)}
@@ -52,7 +54,7 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
           {type === "inbox" && (
             <p>
               Last seen at
-              <span> 12:32 PM</span>
+              <span> {lastConnection}</span>
             </p>
           )}
         </div>

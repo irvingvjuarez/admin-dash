@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.section-full{
+  height: calc(100vh - 48px);
+}
+
 .moving{
   transform: translateX(100%);
 }

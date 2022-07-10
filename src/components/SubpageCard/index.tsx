@@ -1,6 +1,6 @@
 import { IoIosArrowForward } from "react-icons/io"
 import { Link } from "react-router-dom"
-import { IFact } from "../../types"
+import { IFact } from "@app/types"
 import { CardContainer } from "../CardContainer"
 
 const SubpageCard: React.FC<IFact> = ({ title, figure, icon, color, url }): JSX.Element => {

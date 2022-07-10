@@ -1,5 +1,6 @@
 import { SectionContainer } from "../containers/SectionContainer"
 import { ConsumersView } from "../components/ConsumersView"
+import { Inbox } from "../containers/Inbox"
 
 const Consumers: React.FC = (): JSX.Element => {
   return(
@@ -8,7 +9,10 @@ const Consumers: React.FC = (): JSX.Element => {
       titleStrong={true}
       titleClassName="mb-3" >
       
-      <ConsumersView />
+      <section className="md:grid md:grid-cols-2">
+        <ConsumersView />
+        <Inbox containerClassName="hidden md:block" />
+      </section>
 
     </SectionContainer>
   )

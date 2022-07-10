@@ -2,19 +2,29 @@ import { ChatForm } from "../../components/ChatForm"
 import { ConsumerItem } from "../../components/ConsumerItem"
 
 interface InboxProps {
-  person: any
+  person?: any
+  containerClassName?: string
 }
 
-const Inbox: React.FC<InboxProps> = ({ person }) => {
+const Inbox: React.FC<InboxProps> = ({
+  person,
+  containerClassName
+}) => {
   return(
-    <>
-      <div>
-        {/* @ts-ignore */}
-        <ConsumerItem {...person} type="inbox" />
-      </div>
+    <section className={`border border-[transparent] ${containerClassName}`}>
+      {person ? (
+        <>
+          <div>
+            {/* @ts-ignore */}
+            <ConsumerItem {...person} type="inbox" />
+          </div>
 
-      <ChatForm />
-    </>
+          <ChatForm />
+        </>
+      ) : (
+        <h2 className="w-full text-center text-lg mt-3 tracking-wider">Start a conversation</h2>
+      )}
+    </section>
   )
 }
 

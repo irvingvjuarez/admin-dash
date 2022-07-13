@@ -4,6 +4,28 @@ import { TiWeatherStormy, TiWeatherShower, TiWeatherPartlySunny, TiWeatherWindyC
 import { MdAttachMoney } from "react-icons/md"
 
 export const DATA = {
+  weatherMetadata: [
+    {
+      title: "Wind",
+      value: "12",
+      inTermsOf: "m/h"
+    },
+    {
+      title: "Visibility",
+      value: "20",
+      inTermsOf: "g/h"
+    },
+    {
+      title: "Humidity",
+      value: "4",
+      inTermsOf: "h/u"
+    },
+    {
+      title: "UV",
+      value: "1",
+      inTermsOf: ""
+    }
+  ],
   consumers: [
     {
       name: "Adolf Hitler",

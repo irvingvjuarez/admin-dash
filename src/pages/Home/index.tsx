@@ -13,7 +13,7 @@ const Home: React.FC = (): JSX.Element => {
 
   return(
     <>
-      <article className="lg:grid grid-cols-4 gap-3 mb-3">
+      <article className="lg:grid grid-cols-4 gap-3 mb-3 max-w-[1500px] mx-auto">
         {facts.map(fact => (
           <SubpageCard key={fact.id} {...fact} />
         ))}

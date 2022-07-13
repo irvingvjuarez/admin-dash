@@ -14,7 +14,7 @@ const LinkWrapper: React.FC<LinkWrapperProps> = ({
   if(params){
     const { pathname } = useLocation()
     return (
-      <Link to={`${pathname}`}>
+      <Link to={`${pathname}?chat=${params}`}>
         {children}
       </Link>
     )

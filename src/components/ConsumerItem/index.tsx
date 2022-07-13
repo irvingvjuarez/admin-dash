@@ -1,8 +1,7 @@
 import { MEDIA_QUERIES } from "@app/globals"
-import { useEffect, useState } from "react"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { LinkWrapper } from "../LinkWrapper"
-import { cleanSearch, getConsumerInitials, getStatusColor } from "./utils"
+import { getConsumerInitials, getStatusColor } from "./utils"
 
 interface ConsumerItemProps {
   name: string
@@ -25,9 +24,7 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
   const widthValidation = window.screen.width >= MEDIA_QUERIES.md
 
   const handleClick = () => {
-    if(widthValidation) console.log("Done")
     if(!widthValidation) {
-      console.log("This scenario")
       navigate(`/chat/${name}`)
     }
   }

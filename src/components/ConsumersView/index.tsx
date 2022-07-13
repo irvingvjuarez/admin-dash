@@ -5,7 +5,7 @@ const ConsumersView = () => {
   const { consumers } = DATA
 
   return(
-    <article>
+    <article className="overflow-auto md:h-[80vh]">
       {consumers.map(consumer => 
         <ConsumerItem key={consumer.name} {...consumer} />
       )}

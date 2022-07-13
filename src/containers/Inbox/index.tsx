@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
 import { ChatForm } from "../../components/ChatForm"
 import { ConsumerItem } from "../../components/ConsumerItem"
@@ -21,7 +22,7 @@ const Inbox: React.FC<InboxProps> = ({
   }
 
   return(
-    <section className={getContainerClassName()}>
+    <section className={getContainerClassName()} >
       {person ? (
         <>
           <div>

@@ -1,4 +1,8 @@
+import { MEDIA_QUERIES } from "@app/globals"
+import { useEffect, useState } from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 import { LinkWrapper } from "../LinkWrapper"
+import { cleanSearch, getConsumerInitials, getStatusColor } from "./utils"
 
 interface ConsumerItemProps {
   name: string
@@ -17,21 +21,22 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
   lastConnection,
   type = "standard"
 }) => {
-  const getStatusColor = (status: string) => {
-    if(status === "Pending") return "bg-contrast4-clear"
-    if(status === "Done") return "bg-contrast5-clear"
-    if(status === "Broken") return "bg-[#ef4444]"
-  }
+  const navigate = useNavigate()
+  const widthValidation = window.screen.width >= MEDIA_QUERIES.md
 
-  const getConsumerInitials = (name: string) => {
-    let wordMatches = [...name.matchAll(/[a-z]+/ig)]
-    let initials = wordMatches.map(word => word[0].charAt(0))
-    return initials.join("")
+  const handleClick = () => {
+    if(widthValidation) console.log("Done")
+    if(!widthValidation) {
+      console.log("This scenario")
+      navigate(`/chat/${name}`)
+    }
   }
 
   return(
-    <LinkWrapper url={`/chat/${name}`}>
-      <div className="flex mb-2 md:px-1 md:py-2 hover:bg-primary-clear-super">
+    <LinkWrapper params={widthValidation ? name : undefined}>
+      <div
+        className="flex mb-2 md:px-1 md:py-2 hover:bg-primary-clear-super md:pr-2"
+        onClick={handleClick} >
         <div className={`flex-none mr-2 w-[50px] h-[50px] rounded-full ${color} grid place-content-center text-xl`}>
           {getConsumerInitials(name)}
         </div>

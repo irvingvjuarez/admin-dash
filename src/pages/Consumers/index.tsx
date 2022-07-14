@@ -2,7 +2,7 @@ import { SectionContainer } from "@app/containers/SectionContainer"
 import { ConsumersView } from "@app/components/ConsumersView"
 import { Inbox } from "@app/containers/Inbox"
 import { useLocation } from "react-router-dom"
-import { cleanSearch } from "./utils"
+import { cleanSearch } from "@app/utils"
 import { useEffect, useState } from "react"
 import { DATA } from "@app/data"
 

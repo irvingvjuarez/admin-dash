@@ -4,7 +4,8 @@ import { useLocation } from "react-router-dom"
 import { ChatForm } from "../../components/ChatForm"
 import { ConsumerItem } from "../../components/ConsumerItem"
 import { MEDIA_QUERIES } from "../../globals"
-import { classNameProps, cleanSearch, getContainerClassName } from "./utils"
+import { classNameProps, getContainerClassName } from "./utils"
+import { cleanSearch } from "@app/utils"
 
 interface InboxProps {
   person?: any

@@ -7,20 +7,12 @@ import { useEffect, useState } from "react"
 import { DATA } from "@app/data"
 
 const Consumers: React.FC = (): JSX.Element => {
-  // const { search } = useLocation()
-  // const [chat, setChat] = useState(search)
-
-  // useEffect(() => {
-  //   const cleanedSearch = cleanSearch(search)
-  //   const customer = DATA.consumers.find(consumer => consumer.name === cleanedSearch)
-  //   if(customer) console.log("customer:", customer)
-  // }, [search])
-
   return(
     <SectionContainer
       title="Consumers"
       titleStrong={true}
-      titleClassName="mb-3" >
+      titleClassName="mb-3"
+      sectionClassName="mx-auto" >
       
       <section className="md:grid md:grid-cols-2">
         <ConsumersView />

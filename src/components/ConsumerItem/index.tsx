@@ -32,7 +32,7 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
   return(
     <LinkWrapper params={widthValidation ? name : undefined}>
       <div
-        className="flex mb-2 md:px-1 md:py-2 hover:bg-primary-clear-super md:pr-2"
+        className="flex mb-2 md:px-1 md:py-2 hover:bg-primary-clear-super md:pr-2 rounded-l-xl"
         onClick={handleClick} >
         <div className={`flex-none mr-2 w-[50px] h-[50px] rounded-full ${color} grid place-content-center text-xl`}>
           {getConsumerInitials(name)}

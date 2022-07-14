@@ -9,7 +9,7 @@ const ChatForm = () => {
   }
 
   return(
-    <form className="absolute bottom-0 w-full flex items-center p-1 rounded-xl border-just-white border">
+    <form className="absolute bottom-0 w-full flex items-center p-1 rounded-xl border-just-white border md:bottom-2">
       <input
         type="text"
         placeholder="Send a message..."

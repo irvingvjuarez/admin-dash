@@ -1,10 +1,10 @@
 import { DATA } from "@app/data"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import { ChatForm } from "../../components/ChatForm"
 import { ConsumerItem } from "../../components/ConsumerItem"
 import { MEDIA_QUERIES } from "../../globals"
-import { cleanSearch } from "./utils"
+import { classNameProps, cleanSearch, getContainerClassName } from "./utils"
 
 interface InboxProps {
   person?: any
@@ -17,16 +17,15 @@ const Inbox: React.FC<InboxProps> = ({
 }) => {
   const { pathname, search } = useLocation()
   const [chat, setChat] = useState(person)
-
-  const getContainerClassName = () => {
-    let classname = "border border-[transparent]"
-    if(containerClassName) classname += ` ${containerClassName}`
-    if(window.screen.width >= MEDIA_QUERIES.md && /chat/.test(pathname) === false) classname += " border-l-just-white"
-    return classname
+  const validation = window.screen.width >= MEDIA_QUERIES.md
+  const classNameConfig: classNameProps = {
+    containerClassName,
+    validation,
+    pathname
   }
 
   useEffect(() => {
-    if(!person && window.screen.width >= MEDIA_QUERIES.md){
+    if(!person && validation){
       const cleanedSearch = cleanSearch(search)
       const customer = DATA.consumers.find(consumer => consumer.name === cleanedSearch)
       if(customer) setChat(customer)
@@ -34,7 +33,7 @@ const Inbox: React.FC<InboxProps> = ({
   }, [search])
 
   return(
-    <section className={getContainerClassName()} >
+    <section className={getContainerClassName(classNameConfig)} >
       {chat ? (
         <>
           <div>

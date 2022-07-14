@@ -16,6 +16,8 @@ const Inbox: React.FC<InboxProps> = ({
   containerClassName
 }) => {
   const { pathname, search } = useLocation()
+  const [chat, setChat] = useState(person)
+
   const getContainerClassName = () => {
     let classname = "border border-[transparent]"
     if(containerClassName) classname += ` ${containerClassName}`
@@ -23,21 +25,21 @@ const Inbox: React.FC<InboxProps> = ({
     return classname
   }
 
-  if(!person){
-    const cleanedSearch = cleanSearch(search)
-    const customer = DATA.consumers.find(consumer => consumer.name === cleanedSearch)
-    if(customer) person = customer
-  }
-
-  console.log("person:", person)
+  useEffect(() => {
+    if(!person && window.screen.width >= MEDIA_QUERIES.md){
+      const cleanedSearch = cleanSearch(search)
+      const customer = DATA.consumers.find(consumer => consumer.name === cleanedSearch)
+      if(customer) setChat(customer)
+    }
+  }, [search])
 
   return(
     <section className={getContainerClassName()} >
-      {person ? (
+      {chat ? (
         <>
           <div>
             {/* @ts-ignore */}
-            <ConsumerItem {...person} type="inbox" />
+            <ConsumerItem {...chat} type="inbox" />
           </div>
 
           <ChatForm />

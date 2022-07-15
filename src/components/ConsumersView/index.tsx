@@ -9,6 +9,7 @@ const ConsumersView = () => {
       {consumers.map(consumer => 
         <ConsumerItem
           key={consumer.name}
+          selected="on"
           {...consumer} />
       )}
     </article>

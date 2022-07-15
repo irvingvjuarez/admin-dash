@@ -29,6 +29,7 @@ const Inbox: React.FC<InboxProps> = ({
     if(!person && validation){
       const cleanedSearch = cleanSearch(search)
       const customer = DATA.consumers.find(consumer => consumer.name === cleanedSearch)
+
       if(customer) setChat(customer)
     }
   }, [search])

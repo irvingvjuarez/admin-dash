@@ -1,5 +1,4 @@
 import { MEDIA_QUERIES } from "@app/globals"
-import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { LinkWrapper } from "../LinkWrapper"
 import { getConsumerInitials, getStatusColor } from "./utils"
@@ -25,8 +24,6 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
 }) => {
   const navigate = useNavigate()
   const screenValidation = window.screen.width >= MEDIA_QUERIES.md
-  const [containerClassname, setContainerClassname] = useState("flex mb-2 md:px-1 md:py-2 hover:bg-primary-clear-super md:pr-2 rounded-l-xl")
-  const { search } = useLocation()
 
   const handleClick = () => {
     if(!screenValidation) {
@@ -34,14 +31,10 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
     }
   }
 
-  useEffect(() => {
-    if(containerClassName) setContainerClassname(prev => `${prev} ${containerClassName}`)
-  }, [search])
-
   return(
     <LinkWrapper params={screenValidation ? name : undefined}>
       <div
-        className={containerClassname}
+        className="flex mb-2 md:px-1 md:py-2 hover:bg-primary-clear-super md:pr-2 rounded-l-xl"
         onClick={handleClick} >
         <div className={`flex-none mr-2 w-[50px] h-[50px] rounded-full ${color} grid place-content-center text-xl`}>
           {getConsumerInitials(name)}

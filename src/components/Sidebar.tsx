@@ -13,8 +13,8 @@ const paths = [
   },
   {
     id: 2,
-    title: "Consumers",
-    url: "consumers"
+    title: "Inbox",
+    url: "inbox"
   },
   {
     id: 3,

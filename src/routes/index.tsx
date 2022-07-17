@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 // components
 import { Home } from "../pages/Home"
 import { WeatherForecast } from "../pages/WeatherForecast"
-import { Consumers } from "../pages/Consumers"
+// import { Consumers } from "../pages/Consumers"
+import { InboxPage } from "../pages/Inbox"
 import { TaskManagement } from "../pages/TaskManagement"
 import { Calendar } from "../pages/Calendar"
 import { Profile } from "../pages/Profile"
@@ -23,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/weather" element={<WeatherForecast />} />
-          <Route path="/consumers" element={<Consumers />} />
+          <Route path="/inbox" element={<InboxPage />} />
           <Route path="/management" element={<TaskManagement />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/profile" element={<Profile />} />

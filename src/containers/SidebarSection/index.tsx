@@ -25,7 +25,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({
         {items.group.map(item => (
           <Link to={item.url} key={item.id} onClick={toggle}>
             <li
-              className={`text-just-white text-thin tracking-wider py-3 px-4 ${setFocus("/" + item.url, pathname)}`}>
+              className={`text-just-white text-thin tracking-wider py-3 px-4 border-2 border-r-0 border-contrast-strong ${setFocus("/" + item.url, pathname)}`}>
               {item.title}
             </li>
           </Link>

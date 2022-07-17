@@ -16,7 +16,7 @@
 }
 
 .onfocus{
-  @apply border-l-2 bg-primary-clear-super font-semibold lg:border-l-4;
+  @apply border-l-just-white bg-primary font-semibold lg:border-l-4;
 }
 
 .chart{

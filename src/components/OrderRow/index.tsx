@@ -1,30 +1,38 @@
+import { getContainerClassName, getCellClassName } from "./utils"
+
 interface OrderRowProps {
-  columns?: Array<string>
+  id?: number
+  item?: string
+  customer?: string
+  price?: number
+  status?: "Pending" | "Active" | "Rejected" | "Canceled"
+  description?: string
+  image?: string
+  location?: string
+  productID?: number
 }
 
 const OrderRow: React.FC<OrderRowProps> = ({
-  columns = ["Image", "Item", "Customer", "Total Amount", "Status", "Order ID", "Location"]
+  id,
+  item,
+  customer,
+  price,
+  status,
+  image,
+  location,
+  productID
 }): JSX.Element => {
-  const getContainerClassName = () => {
-    let classname = "w-full flex justify-evenly border-2 min-w-[900px]"
-    if(columns[0] === "Image"){
-      classname += " rounded-t-lg"
-    }else{
-      classname += " border-b-primary"
-    }
-    return classname
-  }
-
-  const getCellClassName = () => {
-    let classname = "tracking-wide py-2 md:text-lg"
-    return classname
-  }
+  const columns = id ?  
+    [image, item, customer, price, status, productID, location] : 
+    ["Image", "Item", "Customer", "Total Amount", "Status", "Order ID", "Location"]
 
   return(
-    <div className={getContainerClassName()}>
-      {columns.map(column => (
+    <div className={getContainerClassName(columns)}>
+      {columns.map((column, index) => (
         <div className={getCellClassName()} key={column}>
-          {column}
+          {(index === 0 && column !== "Image") ? (
+            <img src={image} key={column} width="90" />
+          ) : column}
         </div>
       ))}
     </div>

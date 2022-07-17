@@ -3,6 +3,67 @@ import { BsCartPlusFill, BsFillCartCheckFill } from "react-icons/bs"
 import { TiWeatherStormy, TiWeatherShower, TiWeatherPartlySunny, TiWeatherWindyCloudy, TiWeatherSunny } from "react-icons/ti"
 import { MdAttachMoney } from "react-icons/md"
 
+export const PATHS = [
+  {
+    id: 0,
+    groupTitle: "Dashboard",
+    group: [
+      {
+        id: 0,
+        title: "Index",
+        url: ""
+      },
+    ]
+  },
+  {
+    id: 1,
+    groupTitle: "Pages",
+    group: [
+      {
+        id: 0,
+        title: "Orders",
+        url: "orders"
+      },
+      {
+        id: 1,
+        title: "Employees",
+        url: "employees"
+      },
+      {
+        id: 2,
+        title: "Customers",
+        url: "customers"
+      },
+    ]
+  },
+  {
+    id: 2,
+    groupTitle: "Apps",
+    group: [
+      {
+        id: 0,
+        title: "Inbox",
+        url: "inbox"
+      },
+      {
+        id: 1,
+        title: "Calendar",
+        url: "calendar"
+      },
+      {
+        id: 2,
+        title: "Kanban",
+        url: "kanban"
+      },
+      {
+        id: 3,
+        title: "Task Management",
+        url: "management"
+      },
+    ]
+  },
+]
+
 export const DATA = {
   weatherMetadata: [
     {

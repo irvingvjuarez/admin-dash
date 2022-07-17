@@ -1,5 +1,6 @@
 import { useState } from "react"
 import HamburgerIcon from "../../assets/icons/hamburger.svg"
+import { Link } from "react-router-dom"
 
 // components
 import { Sidebar } from "../Sidebar"
@@ -14,10 +15,10 @@ const Navbar: React.FC = (): JSX.Element => {
         <img src={HamburgerIcon} alt="" />
       </button>
 
-      <h2 className="text-base">
+      <Link to="/" className="text-base">
         <span className="text-just-white font-normal">Admin</span>
         <span className="text-contrast-clear font-bold">DASH</span>
-      </h2>
+      </Link>
 
       <div className={`lg:hidden absolute top-full transition-transform duration-700 right-full ${sidebarVisible && "translate-x-full"}`}>
         <Sidebar toggle={handleClick} />

@@ -17,7 +17,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({
 
   return(
     <section className="py-2 pl-2">
-      <h2 className="text-lg tracking-wider text-just-white">
+      <h2 className="text-lg tracking-wider text-just-white uppercase">
         {items.groupTitle}
       </h2>
 

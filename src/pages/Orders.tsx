@@ -1,4 +1,5 @@
 import { SectionContainer } from "../containers/SectionContainer"
+import { OrdersView } from "@app/containers/OrdersView"
 
 const Orders: React.FC = (): JSX.Element => {
   return(
@@ -6,7 +7,7 @@ const Orders: React.FC = (): JSX.Element => {
       title="Orders"
       titleStrong={true}
       subpage={true}>
-      <div></div>
+      <OrdersView />
     </SectionContainer>
   )
 }

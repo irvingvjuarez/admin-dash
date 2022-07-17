@@ -21,7 +21,10 @@ const Sidebar: React.FC<SidebarProps> = ({ toggle }): JSX.Element => {
 
       <ul className="bg-contrast-strong">
         {PATHS.map(pathGroup => (
-          <SidebarSection items={pathGroup} toggle={toggle} />
+          <SidebarSection
+            items={pathGroup}
+            toggle={toggle}
+            key={pathGroup.id} />
         ))}
       </ul>
     </section>

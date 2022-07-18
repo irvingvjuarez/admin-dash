@@ -1,5 +1,6 @@
-export const getContainerClassName = (columns: any[]) => {
-  let classname = "w-full grid grid-cols-7 place-items-center min-w-[900px] even:bg-primary-strong "
+export const getContainerClassName = (columns: any[], size: number | undefined) => {
+  let cols = size ? "grid-cols-" + size : "grid-cols-7"
+  let classname = `w-full grid ${cols} place-items-center min-w-[900px] even:bg-primary-strong `
   if(columns[0] === "Image") classname += " border-b-2"
   return classname
 }

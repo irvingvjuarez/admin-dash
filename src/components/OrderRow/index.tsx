@@ -11,6 +11,7 @@ interface OrderRowProps {
   image?: string
   location?: string
   productID?: number
+  headers?: string[]
 }
 
 const OrderRow: React.FC<OrderRowProps> = ({
@@ -21,16 +22,15 @@ const OrderRow: React.FC<OrderRowProps> = ({
   status,
   image,
   location,
-  productID
+  productID,
+  headers
 }): JSX.Element => {
-  const columns = id ?  
-    [image, item, customer, "$" + price, status, productID, location] : 
-    ["Image", "Item", "Customer", "Total Amount", "Status", "Order ID", "Location"]
+  const columns = headers ?? [image, item, customer, "$" + price, status, productID, location]
 
   return(
-    <div className={getContainerClassName(columns)}>
+    <div className={getContainerClassName(columns, headers?.length)}>
       {columns.map((column, index) => (
-        <div key={column}>
+        <div key={id}>
           {(index === 4 && column !== "Status") ? (
             <span className={getStatusClassName(status)} >
               {column}

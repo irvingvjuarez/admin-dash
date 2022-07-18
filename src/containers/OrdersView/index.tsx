@@ -1,15 +1,12 @@
+import { TableContainer } from "@app/containers/TableContainer"
 import { OrderRow } from "@app/components/OrderRow"
 import orders from "@app/data/orders.json"
 
 const OrdersView: React.FC = (): JSX.Element => {
-  return(
-    <section className="w-full overflow-x-auto border-2 rounded-lg">
-      <OrderRow />
+  const headers = ["Image", "Item", "Customer", "Total Amount", "Status", "Order ID", "Location"]
 
-      {orders.map(order => (
-        <OrderRow {...order} key={order.id} />
-      ))}
-    </section>
+  return(
+    <TableContainer headers={headers} rows={orders} />
   )
 }
 

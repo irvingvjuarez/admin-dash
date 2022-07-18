@@ -11,7 +11,7 @@ const Subpage: React.FC<SubpageProps> = ({ isSubpage, children }): JSX.Element =
   const handleClick = () => navigate(-1)
 
   if(isSubpage) return(
-    <div className="flex items-center mb-3">
+    <div className="flex items-center">
       <button onClick={handleClick}>
         <BiArrowBack className="mr-2 text-xl" />
       </button>

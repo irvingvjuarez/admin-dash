@@ -19,11 +19,13 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   const title_classname = titleStrong ? "font-normal" : "font-light"
   return(
     <section className={`nothing max-w-[1500px] mx-auto ${sectionClassName}`}>
-      <Subpage isSubpage={subpage ?? false}>
-        <h2 className={`text-xl tracking-wider w-full ${title_classname} ${titleClassName}`}>
-          {title}
-        </h2>
-      </Subpage>
+      <div className="mb-3">
+        <Subpage isSubpage={subpage ?? false}>
+          <h2 className={`text-xl tracking-wider w-full ${title_classname} ${titleClassName}`}>
+            {title}
+          </h2>
+        </Subpage>
+      </div>
 
       {children}
     </section>

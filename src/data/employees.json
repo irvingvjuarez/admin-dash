@@ -6,7 +6,8 @@
     "location": "USA",
     "entryDate": "01/02/2022",
     "manager": "Carson",
-    "employeeID": 1
+    "employeeID": 1,
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "location": "Mexico",
     "entryDate": "01/02/2022",
     "manager": "President",
-    "employeeID": 2
+    "employeeID": 2,
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=7717"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "location": "London",
     "entryDate": "01/02/2022",
     "manager": "Carson",
-    "employeeID": "3"
+    "employeeID": "3",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=122"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "location": "Vienna",
     "entryDate": "01/02/2022",
     "manager": "Lancaster",
-    "employeeID": "4"
+    "employeeID": "4",
+    "avatar": "https://lh3.googleusercontent.com/a/AItbvmm1nyFsBB_sqrT7vtoIY-Aj4mwfZeCp03i-7o23=s96-c"
   },
   {
     "id": 5,
@@ -42,6 +46,7 @@
     "location": "Texas",
     "entryDate": "01/02/2022",
     "manager": "Johnson",
-    "employeeID": "5"
+    "employeeID": "5",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
   }
 ]

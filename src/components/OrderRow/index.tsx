@@ -2,6 +2,8 @@ import { getContainerClassName, getCellClassName, getStatusClassName, isImageUrl
 import { MdLocationOn } from "react-icons/md"
 
 interface OrderRowProps {
+  isFirstRow: boolean
+  headers: string[]
   type?: "orders" | "employees" | "customers"
   id?: number
   item?: string
@@ -12,7 +14,6 @@ interface OrderRowProps {
   image?: string
   location?: string
   productID?: number
-  headers?: string[]
   name?: string
   designation?: string
   entryDate?: string
@@ -21,6 +22,8 @@ interface OrderRowProps {
 }
 
 const OrderRow: React.FC<OrderRowProps> = ({
+  isFirstRow = false,
+  headers,
   type,
   item,
   customer,
@@ -29,7 +32,6 @@ const OrderRow: React.FC<OrderRowProps> = ({
   image,
   location,
   productID,
-  headers,
   name,
   designation,
   entryDate,
@@ -37,7 +39,7 @@ const OrderRow: React.FC<OrderRowProps> = ({
   employeeID
 }): JSX.Element => {
   let columns: any[]
-  if(headers){
+  if(isFirstRow){
     columns = headers
   }else{
     switch(type){
@@ -53,19 +55,17 @@ const OrderRow: React.FC<OrderRowProps> = ({
     }
   }
 
-  console.log("columns:", columns)
-
   return(
-    <div className={getContainerClassName(columns, headers?.length)}>
+    <div className={getContainerClassName(columns, headers.length)}>
       {columns.map((column, index) => (
         <div key={column}>
-          {(index === 4 && column !== "Status") ? (
+          {(headers[index] === "Status" && column !== "Status") ? (
             <span className={getStatusClassName(status)} >
               {column}
             </span>
           ) : (
             <div className={getCellClassName()} >
-              {(index === 6 && column !== "Location") && (
+              {(headers[index] === "Location" && column !== "Location") && (
                 <MdLocationOn />
               )}
 

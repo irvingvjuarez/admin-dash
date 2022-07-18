@@ -13,12 +13,15 @@ const TableContainer: React.FC<TableContainerProps> = ({
 }): JSX.Element => {
   return(
     <section className="w-full overflow-x-auto border-2 rounded-lg">
-      <OrderRow headers={headers} />
+      <OrderRow
+        headers={headers}
+        isFirstRow={true} />
 
       {rows.map(row => (
         <OrderRow 
           key={row.id}
           type={type}
+          headers={headers}
           {...row} />
       ))}
     </section>

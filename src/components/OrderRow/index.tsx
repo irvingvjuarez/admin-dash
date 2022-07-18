@@ -42,7 +42,12 @@ const OrderRow: React.FC<OrderRowProps> = ({
               )}
 
               {(index === 0 && column !== "Image") ? (
-                <img src={image} key={column} width="90" height="67.5px" />
+                <img
+                  src={image}
+                  key={column}
+                  width="90"
+                  height="67.5px"
+                  className="skeleton" />
               ) : column}
             </div>
           )}

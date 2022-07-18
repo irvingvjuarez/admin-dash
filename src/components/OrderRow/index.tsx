@@ -1,7 +1,8 @@
-import { getContainerClassName, getCellClassName, getStatusClassName } from "./utils"
+import { getContainerClassName, getCellClassName, getStatusClassName, isImageUrl } from "./utils"
 import { MdLocationOn } from "react-icons/md"
 
 interface OrderRowProps {
+  type?: "orders" | "employees" | "customers"
   id?: number
   item?: string
   customer?: string
@@ -12,10 +13,15 @@ interface OrderRowProps {
   location?: string
   productID?: number
   headers?: string[]
+  name?: string
+  designation?: string
+  entryDate?: string
+  manager?: string
+  employeeID?: number
 }
 
 const OrderRow: React.FC<OrderRowProps> = ({
-  id,
+  type,
   item,
   customer,
   price,
@@ -23,14 +29,36 @@ const OrderRow: React.FC<OrderRowProps> = ({
   image,
   location,
   productID,
-  headers
+  headers,
+  name,
+  designation,
+  entryDate,
+  manager,
+  employeeID
 }): JSX.Element => {
-  const columns = headers ?? [image, item, customer, "$" + price, status, productID, location]
+  let columns: any[]
+  if(headers){
+    columns = headers
+  }else{
+    switch(type){
+      case "orders":
+        columns = [image, item, customer, "$" + price, status, productID, location]
+      break;
+      case "employees":
+        columns = [name, designation, location, entryDate, manager, employeeID]
+      break;
+      default:
+        // customers scenario
+        columns = []
+    }
+  }
+
+  console.log("columns:", columns)
 
   return(
     <div className={getContainerClassName(columns, headers?.length)}>
       {columns.map((column, index) => (
-        <div key={id}>
+        <div key={column}>
           {(index === 4 && column !== "Status") ? (
             <span className={getStatusClassName(status)} >
               {column}
@@ -41,7 +69,7 @@ const OrderRow: React.FC<OrderRowProps> = ({
                 <MdLocationOn />
               )}
 
-              {(index === 0 && column !== "Image") ? (
+              {isImageUrl(column) ? (
                 <img
                   src={image}
                   key={column}

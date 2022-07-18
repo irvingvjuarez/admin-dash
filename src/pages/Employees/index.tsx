@@ -1,11 +1,18 @@
+import { TableContainer } from "@app/containers/TableContainer"
 import { SectionContainer } from "@app/containers/SectionContainer"
+import employees from "@app/data/employees.json"
 
 const Employees = () => {
+  const headers = ["Employee", "Designation", "Location", "Hire Date", "Manager", "Employee ID"]
+
   return(
     <SectionContainer
       title="Employees"
       titleStrong={true} >
-      <h2>HI</h2>
+      <TableContainer
+        headers={headers}
+        rows={employees}
+        type="employees" />
     </SectionContainer>
   )
 }

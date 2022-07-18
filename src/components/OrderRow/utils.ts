@@ -1,3 +1,5 @@
+import { URL_REGEXP } from "@app/constants/regexp"
+
 export const getContainerClassName = (columns: any[], size: number | undefined) => {
   let cols = size ? "grid-cols-" + size : "grid-cols-7"
   let classname = `w-full grid ${cols} place-items-center min-w-[900px] even:bg-primary-strong `
@@ -6,7 +8,7 @@ export const getContainerClassName = (columns: any[], size: number | undefined) 
 }
 
 export const getCellClassName = () => {
-  let classname = "tracking-wide py-2 md:text-lg flex justify-center items-center"
+  let classname = "tracking-wide py-2 md:text-lg flex justify-center items-center text-center"
   return classname
 }
 
@@ -18,4 +20,8 @@ export const getStatusClassName = (status: "Pending" | "Active" | "Rejected" | "
   if(status === "Active") classname += " bg-contrast4-clear"
   if(status === "Canceled") classname += " bg-contrast-strong"
   return classname
+}
+
+export const isImageUrl = (url: string) => {
+  return URL_REGEXP.test(url)
 }

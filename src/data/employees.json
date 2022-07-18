@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Richard Salinas",
+    "designation": "Sales Representative",
+    "location": "USA",
+    "entryDate": "01/02/2022",
+    "manager": "Carson",
+    "employeeID": 1
+  },
+  {
+    "id": 2,
+    "name": "Carlos Slim",
+    "designation": "Chief Executive",
+    "location": "Mexico",
+    "entryDate": "01/02/2022",
+    "manager": "President",
+    "employeeID": 2
+  },
+  {
+    "id": 3,
+    "name": "Will Smith",
+    "designation": "Chief Technology Officer",
+    "location": "London",
+    "entryDate": "01/02/2022",
+    "manager": "Carson",
+    "employeeID": "3"
+  },
+  {
+    "id": 4,
+    "name": "Guillermo Blazer",
+    "designation": "Marketing Head",
+    "location": "Vienna",
+    "entryDate": "01/02/2022",
+    "manager": "Lancaster",
+    "employeeID": "4"
+  },
+  {
+    "id": 5,
+    "name": "Julio Cesar",
+    "designation": "Sales Representative",
+    "location": "Texas",
+    "entryDate": "01/02/2022",
+    "manager": "Johnson",
+    "employeeID": "5"
+  }
+]

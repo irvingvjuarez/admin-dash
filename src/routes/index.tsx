@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 // components
 import { Home } from "../pages/Home"
 import { WeatherForecast } from "../pages/WeatherForecast"
-// import { Consumers } from "../pages/Consumers"
+import { Employees } from "../pages/Employees"
 import { InboxPage } from "../pages/Inbox"
 import { TaskManagement } from "../pages/TaskManagement"
 import { Calendar } from "../pages/Calendar"
@@ -31,6 +31,7 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/weather-next-seven-days" element={<NextSevenDays />} />
+          <Route path="/employees" element={<Employees />} />
           <Route path="/sells/:time" element={<Sells />} />
           <Route path="/deliveries/:time" element={<Deliveries />} />
           <Route path="/chat/:name" element={<Chat />} />

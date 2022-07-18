@@ -15,7 +15,9 @@ const TableContainer: React.FC<TableContainerProps> = ({
     <section className="w-full overflow-x-auto border-2 rounded-lg">
       <OrderRow
         headers={headers}
-        isFirstRow={true} />
+        isFirstRow={true}
+        type={type}
+      />
 
       {rows.map(row => (
         <OrderRow 

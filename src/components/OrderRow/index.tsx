@@ -56,7 +56,7 @@ const OrderRow: React.FC<OrderRowProps> = ({
   }
 
   return(
-    <div className={getContainerClassName(columns, headers.length)}>
+    <div className={getContainerClassName(columns, type)}>
       {columns.map((column, index) => (
         <div key={column}>
           {(headers[index] === "Status" && column !== "Status") ? (

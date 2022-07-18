@@ -19,6 +19,7 @@ interface OrderRowProps {
   entryDate?: string
   manager?: string
   employeeID?: number
+  avatar?: string
 }
 
 const OrderRow: React.FC<OrderRowProps> = ({
@@ -36,7 +37,8 @@ const OrderRow: React.FC<OrderRowProps> = ({
   designation,
   entryDate,
   manager,
-  employeeID
+  employeeID,
+  avatar
 }): JSX.Element => {
   let columns: any[]
   if(isFirstRow){
@@ -47,7 +49,7 @@ const OrderRow: React.FC<OrderRowProps> = ({
         columns = [image, item, customer, "$" + price, status, productID, location]
       break;
       case "employees":
-        columns = [name, designation, location, entryDate, manager, employeeID]
+        columns = [avatar, name, designation, location, entryDate, manager, employeeID]
       break;
       default:
         // customers scenario
@@ -71,11 +73,11 @@ const OrderRow: React.FC<OrderRowProps> = ({
 
               {isImageUrl(column) ? (
                 <img
-                  src={image}
+                  src={column}
                   key={column}
-                  width="90"
+                  width="90px"
                   height="67.5px"
-                  className="skeleton" />
+                  className="skeleton rounded-xl" />
               ) : column}
             </div>
           )}

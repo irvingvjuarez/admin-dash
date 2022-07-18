@@ -3,7 +3,7 @@ import { SectionContainer } from "@app/containers/SectionContainer"
 import employees from "@app/data/employees.json"
 
 const Employees = () => {
-  const headers = ["Employee", "Designation", "Location", "Hire Date", "Manager", "Employee ID"]
+  const headers = ["", "Employee", "Designation", "Location", "Hire Date", "Manager", "Employee ID"]
 
   return(
     <SectionContainer

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Nirav Joshi",
+    "email": "email823737@random.com",
+    "project": "Hosting Press HTML",
+    "location": "USA",
+    "status": "Active",
+    "weeks": 40,
+    "budget": "15K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+  },
+  {
+    "id": 2,
+    "name": "Sunil Joshi",
+    "email": "email823737@random.com",
+    "project": "Elite Admin",
+    "location": "Mexico",
+    "status": "Pending",
+    "weeks": 37,
+    "budget": "25K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+  },
+  {
+    "id": 3,
+    "name": "Joshua Oswaldo",
+    "email": "email823737@random.com",
+    "project": "API development",
+    "location": "Greece",
+    "status": "Canceled",
+    "weeks": 38,
+    "budget": "29K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+  },
+  {
+    "id": 4,
+    "name": "Josh Nichols",
+    "email": "email823737@random.com",
+    "project": "Hyper-Fart",
+    "location": "China",
+    "status": "Canceled",
+    "weeks": 42,
+    "budget": "50K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+  }
+]

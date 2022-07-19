@@ -20,6 +20,9 @@ interface OrderRowProps {
   manager?: string
   employeeID?: number
   avatar?: string
+  project?: string
+  weeks?: number
+  budget?: string
 }
 
 const OrderRow: React.FC<OrderRowProps> = ({
@@ -38,7 +41,10 @@ const OrderRow: React.FC<OrderRowProps> = ({
   entryDate,
   manager,
   employeeID,
-  avatar
+  avatar,
+  project,
+  weeks,
+  budget
 }): JSX.Element => {
   let columns: any[]
   if(isFirstRow){
@@ -53,7 +59,7 @@ const OrderRow: React.FC<OrderRowProps> = ({
       break;
       default:
         // customers scenario
-        columns = []
+        columns = [avatar, name, project, status, weeks, budget, location]
     }
   }
 

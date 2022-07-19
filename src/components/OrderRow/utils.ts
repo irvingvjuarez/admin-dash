@@ -1,11 +1,7 @@
 import { URL_REGEXP } from "@app/constants/regexp"
 
 export const getContainerClassName = (columns: any[], type: "orders" | "employees" | "customers" | undefined) => {
-  let cols
-  if(type === "orders") cols = "grid-cols-7"
-  if(type === "employees") cols = "grid-cols-7"
-
-  let classname = `w-full grid ${cols} place-items-center min-w-[900px] even:bg-primary-strong first:border-b-2 first:min-h-fit min-h-[83px]`
+  let classname = `w-full grid grid-cols-7 place-items-center min-w-[900px] even:bg-primary-strong first:border-b-2 first:min-h-fit min-h-[83px]`
   return classname
 }
 

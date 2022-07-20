@@ -1,6 +1,10 @@
+import { SectionContainer } from "@app/containers/SectionContainer"
+
 const TaskManagement: React.FC = (): JSX.Element => {
   return(
-    <h2>Task Management</h2>
+    <SectionContainer title="Task Management" titleStrong={true}>
+      <h2>Hey, I am the Task Management page</h2>
+    </SectionContainer>
   )
 }
 

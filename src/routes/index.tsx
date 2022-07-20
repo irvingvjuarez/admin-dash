@@ -16,6 +16,7 @@ import { NextSevenDays } from "../pages/NextSevenDays"
 import { Chat } from "../pages/Chat"
 import { Layout } from "../containers/Layout"
 import { Customers } from "@app/pages/Customers"
+import { Kanban } from "@app/pages/Kanban"  
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/weather-next-seven-days" element={<NextSevenDays />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/customers" element={<Customers />} />
+          <Route path="/kanban" element={<Kanban />} />
           <Route path="/sells/:time" element={<Sells />} />
           <Route path="/deliveries/:time" element={<Deliveries />} />
           <Route path="/chat/:name" element={<Chat />} />

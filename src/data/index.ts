@@ -47,19 +47,9 @@ export const PATHS = [
       },
       {
         id: 1,
-        title: "Calendar",
-        url: "calendar"
-      },
-      {
-        id: 2,
-        title: "Kanban",
-        url: "kanban"
-      },
-      {
-        id: 3,
-        title: "Task Management",
-        url: "management"
-      },
+        title: "Weather",
+        url: "weather"
+      }
     ]
   },
 ]

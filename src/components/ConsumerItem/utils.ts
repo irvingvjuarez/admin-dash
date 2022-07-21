@@ -9,3 +9,19 @@ export const getConsumerInitials = (name: string) => {
   let initials = wordMatches.map(word => word[0].charAt(0))
   return initials.join("")
 }
+
+interface IClassNameConfig {
+  containerClassName: string | undefined
+  search: string | null
+  name: string
+  selected: "on" | "off"
+}
+
+export const getContainerClassName = (config: IClassNameConfig) => {
+  const { containerClassName, search, name, selected } = config
+
+  let classname = "flex mb-2 border-2 border-[transparent] md:px-1 md:py-2 hover:border-just-white md:pr-2 rounded-l-xl"
+  if(containerClassName) classname += ` ${containerClassName}`
+  if(search === name && selected === "on") classname += " bg-contrast-strong"
+  return classname
+}

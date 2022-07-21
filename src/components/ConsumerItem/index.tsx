@@ -2,18 +2,8 @@ import { MEDIA_QUERIES } from "@app/globals"
 import { cleanSearch } from "@app/utils"
 import { useLocation, useNavigate } from "react-router-dom"
 import { LinkWrapper } from "../LinkWrapper"
-import { getConsumerInitials, getStatusColor } from "./utils"
-
-interface ConsumerItemProps {
-  name: string
-  color: string
-  message: string
-  status: string
-  lastConnection: string
-  type?: "standard" | "inbox"
-  containerClassName?: string
-  selected?: "on" | "off"
-}
+import { getConsumerInitials, getStatusColor, getContainerClassName } from "./utils"
+import { ConsumerItemProps } from "./props.interface"
 
 const ConsumerItem: React.FC<ConsumerItemProps> = ({
   name,
@@ -28,25 +18,30 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
   const navigate = useNavigate()
   const screenValidation = window.screen.width >= MEDIA_QUERIES.md
   const { search } = useLocation()
-
-  const handleClick = () => {
-    if(!screenValidation) {
-      navigate(`/chat/${name}`)
-    }
+  const handleClick = () => !screenValidation && navigate(`/chat/${name}`)
+  const classnameConfig = {
+    containerClassName,
+    selected,
+    search: cleanSearch(search),
+    name
   }
 
-  const getContainerClassName = () => {
-    let classname = "flex mb-2 border-2 border-[transparent] md:px-1 md:py-2 hover:border-just-white md:pr-2 rounded-l-xl"
-    if(containerClassName) classname += ` ${containerClassName}`
-    if(cleanSearch(search) === name && selected === "on") classname += " bg-contrast-strong"
-    return classname
+  const renderParagraph = (validation: boolean) => {
+    if(validation) return <p>Last seen at <span> {lastConnection}</span></p>
+
+    if(!validation) return (
+      <p className="text-md overflow-hidden max-h-[52px] whitespace-[break-space]">
+        {message}
+      </p>
+    )
   }
 
   return(
     <LinkWrapper params={screenValidation ? name : undefined}>
       <div
-        className={getContainerClassName()}
-        onClick={handleClick} >
+        className={getContainerClassName(classnameConfig)}
+        onClick={handleClick}
+      >
         <div className={`flex-none mr-2 w-[50px] h-[50px] rounded-full ${color} grid place-content-center text-xl`}>
           {getConsumerInitials(name)}
         </div>
@@ -56,22 +51,14 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
             <h2 className="text-xl font-semibold tracking-wide">
               {name}
             </h2>
-            {type !== "inbox" && (
-              <p className="text-md overflow-hidden max-h-[52px] whitespace-[break-space]">
-                {message}
-              </p>
-            )}
+
+            {renderParagraph(type === "inbox")}
             <span className={`block w-[80px] h-fit text-md text-center ${getStatusColor(status)} rounded-xl mt-1`}>
               {status}
             </span>
           </div>
           
-          {type === "inbox" && (
-            <p>
-              Last seen at
-              <span> {lastConnection}</span>
-            </p>
-          )}
+          {renderParagraph(type !== "inbox")}
         </div>
       </div>
     </LinkWrapper>

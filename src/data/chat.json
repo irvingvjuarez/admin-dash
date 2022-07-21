@@ -3,63 +3,63 @@
     "name": "Axel Shade",
     "status": "Pending",
     "message": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
-    "color": "bg-contrast",
+    "color": "bg-contrast-clear",
     "lastConnection": "12:35 PM"
   },
   {
     "name": "Ashien Kyen",
     "status": "Done",
     "message": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;",
-    "color": "bg-contrast2",
+    "color": "bg-contrast2-clear",
     "lastConnection": "15:12 AM"
   },
   {
     "name": "Magdalen Marie",
     "status": "Broken",
     "message": "Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
-    "color": "bg-contrast3",
+    "color": "bg-contrast3-clear",
     "lastConnection": "1:50 PM"
   },
   {
     "name": "Veriee Sealey",
     "status": "Done",
     "message": "Viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae.",
-    "color": "bg-contrast4",
+    "color": "bg-contrast4-clear",
     "lastConnection": "2:04 AM"
   },
   {
     "name": "Jerrome Oganian",
     "status": "Pending",
     "message": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.",
-    "color": "bg-contrast5",
+    "color": "bg-contrast5-clear",
     "lastConnection": "2:04 AM"
   },
   {
     "name": "Sherly Shergill",
     "status": "Pending",
     "message": "Pellentesque viverra pede ac diam. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
-    "color": "bg-contrast5",
+    "color": "bg-contrast-clear",
     "lastConnection": "2:04 AM"
   },
   {
     "name": "Auria Papaminas",
     "status": "Pending",
     "message": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
-    "color": "bg-contrast5",
+    "color": "bg-contrast2-clear",
     "lastConnection": "2:04 AM"
   },
   {
     "name": "Madeleine Dunphie",
     "status": "Pending",
     "message": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Curae; Mauris.",
-    "color": "bg-contrast5",
+    "color": "bg-contrast3-clear",
     "lastConnection": "2:04 AM"
   },
   {
     "name": "Lukas Graham",
     "status": "Pending",
     "message": "Pellentesque ac diam. Dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
-    "color": "bg-contrast5",
+    "color": "bg-contrast4",
     "lastConnection": "2:04 AM"
   }
 ]

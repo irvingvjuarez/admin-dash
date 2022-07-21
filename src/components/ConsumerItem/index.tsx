@@ -57,7 +57,7 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
               {name}
             </h2>
             {type !== "inbox" && (
-              <p className="text-md">
+              <p className="text-md overflow-hidden max-h-[52px] whitespace-[break-space]">
                 {message}
               </p>
             )}

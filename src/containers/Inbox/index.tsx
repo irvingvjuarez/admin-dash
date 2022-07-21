@@ -1,4 +1,4 @@
-import { DATA } from "@app/data"
+import consumers from "@app/data/chat.json"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import { ChatForm } from "../../components/ChatForm"
@@ -28,7 +28,7 @@ const Inbox: React.FC<InboxProps> = ({
   useEffect(() => {
     if(!person && validation){
       const cleanedSearch = cleanSearch(search)
-      const customer = DATA.consumers.find(consumer => consumer.name === cleanedSearch)
+      const customer = consumers.find(consumer => consumer.name === cleanedSearch)
 
       if(customer) setChat(customer)
     }

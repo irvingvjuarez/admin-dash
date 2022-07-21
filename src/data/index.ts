@@ -77,43 +77,6 @@ export const DATA = {
       inTermsOf: ""
     }
   ],
-  consumers: [
-    {
-      name: "Adolf Hitler",
-      status: "Pending",
-      message: "Some non-sense text telling me something I don't want to actually listen to...",
-      color: "bg-contrast",
-      lastConnection: "12:35 PM"
-    },
-    {
-      name: "Batman Wayne",
-      status: "Done",
-      message: "Some non-sense text telling me something I don't want to actually listen to...",
-      color: "bg-contrast2",
-      lastConnection: "15:12 AM"
-    },
-    {
-      name: "Pato Pascual",
-      status: "Broken",
-      message: "Some non-sense text telling me something I don't want to actually listen to...",
-      color: "bg-contrast3",
-      lastConnection: "1:50 PM"
-    },
-    {
-      name: "John Doe",
-      status: "Done",
-      message: "Some non-sense text telling me something I don't want to actually listen to...",
-      color: "bg-contrast4",
-      lastConnection: "2:04 AM"
-    },
-    {
-      name: "Bill Sinatra",
-      status: "Pending",
-      message: "Some non-sense text telling me something I don't want to actually listen to...",
-      color: "bg-contrast5",
-      lastConnection: "2:04 AM"
-    }
-  ],
   nextSevenDays: [
     {
       id: 0,

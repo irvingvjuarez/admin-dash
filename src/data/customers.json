@@ -19,7 +19,7 @@
     "status": "Pending",
     "weeks": 37,
     "budget": "25K",
-    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=7717"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "status": "Canceled",
     "weeks": 38,
     "budget": "29K",
-    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=122"
   },
   {
     "id": 4,
@@ -42,5 +42,60 @@
     "weeks": 42,
     "budget": "50K",
     "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+  },
+  {
+    "id": 5,
+    "name": "Terri Piercy",
+    "email": "email823737@random.com",
+    "project": "Supeap Inc",
+    "location": "China",
+    "status": "Active",
+    "weeks": 42,
+    "budget": "50K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=3929"
+  },
+  {
+    "id": 6,
+    "name": "Billie Mattinson",
+    "email": "email823737@random.com",
+    "project": "Supeap Inc",
+    "location": "Uruguay",
+    "status": "Rejected",
+    "weeks": 42,
+    "budget": "50K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=1038"
+  },
+  {
+    "id": 7,
+    "name": "Lou Peck",
+    "email": "email823737@random.com",
+    "project": "Supeap Inc",
+    "location": "India",
+    "status": "Pending",
+    "weeks": 42,
+    "budget": "50K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=2917"
+  },
+  {
+    "id": 8,
+    "name": "Saree Trousdale",
+    "email": "email823737@random.com",
+    "project": "Supeap Inc",
+    "location": "Korea",
+    "status": "Rejected",
+    "weeks": 42,
+    "budget": "50K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=2915"
+  },
+  {
+    "id": 9,
+    "name": "Hana Vaughn",
+    "email": "email823737@random.com",
+    "project": "Supeap Inc",
+    "location": "Brazil",
+    "status": "Pending",
+    "weeks": 42,
+    "budget": "50K",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=2816"
   }
 ]

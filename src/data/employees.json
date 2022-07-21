@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Richard Salinas",
+    "name": "Wanda Billington",
     "designation": "Sales Representative",
     "location": "USA",
     "entryDate": "01/02/2022",
@@ -11,17 +11,17 @@
   },
   {
     "id": 2,
-    "name": "Carlos Slim",
+    "name": "Blayne Wakeley",
     "designation": "Chief Executive",
     "location": "Mexico",
     "entryDate": "01/02/2022",
-    "manager": "President",
+    "manager": "Garnet",
     "employeeID": 2,
     "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=7717"
   },
   {
     "id": 3,
-    "name": "Will Smith",
+    "name": "Hilde Matiewe",
     "designation": "Chief Technology Officer",
     "location": "London",
     "entryDate": "01/02/2022",
@@ -33,7 +33,7 @@
     "id": 4,
     "name": "Guillermo Blazer",
     "designation": "Marketing Head",
-    "location": "Vienna",
+    "location": "Austria",
     "entryDate": "01/02/2022",
     "manager": "Lancaster",
     "employeeID": "4",
@@ -41,9 +41,29 @@
   },
   {
     "id": 5,
-    "name": "Julio Cesar",
+    "name": "Maire Corie",
     "designation": "Sales Representative",
     "location": "Texas",
+    "entryDate": "01/02/2022",
+    "manager": "Johnson",
+    "employeeID": "5",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=8248"
+  },
+  {
+    "id": 6,
+    "name": "Nikolaus Freeborn",
+    "designation": "Technology Lead",
+    "location": "Montreal",
+    "entryDate": "01/02/2022",
+    "manager": "Hudson",
+    "employeeID": "5",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=7717"
+  },
+  {
+    "id": 7,
+    "name": "Tobias Galia",
+    "designation": "Head of sponsorship",
+    "location": "Guadalajara",
     "entryDate": "01/02/2022",
     "manager": "Johnson",
     "employeeID": "5",

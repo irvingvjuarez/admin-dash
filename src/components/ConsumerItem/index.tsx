@@ -26,14 +26,15 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
     name
   }
 
-  const renderParagraph = (validation: boolean) => {
-    if(validation) return <p>Last seen at <span> {lastConnection}</span></p>
+  const renderParagraph = (status: "inbox" | "standard") => {
+    if(status === "inbox" && type === "inbox") return <p>Last seen at <span> {lastConnection}</span></p>
 
-    if(!validation) return (
+    if(status === "standard" && type === "standard") return (
       <p className="text-md overflow-hidden max-h-[52px] whitespace-[break-space]">
         {message}
       </p>
     )
+
   }
 
   return(
@@ -52,13 +53,13 @@ const ConsumerItem: React.FC<ConsumerItemProps> = ({
               {name}
             </h2>
 
-            {renderParagraph(type === "inbox")}
+            {renderParagraph("standard")}
             <span className={`block w-[80px] h-fit text-md text-center ${getStatusColor(status)} rounded-xl mt-1`}>
               {status}
             </span>
           </div>
           
-          {renderParagraph(type !== "inbox")}
+          {renderParagraph("inbox")}
         </div>
       </div>
     </LinkWrapper>

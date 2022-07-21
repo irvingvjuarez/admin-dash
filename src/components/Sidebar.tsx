@@ -11,7 +11,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggle }): JSX.Element => {
   const { pathname } = useLocation()
 
   return(
-    <section className="bg-contrast-strong h-screen w-52 md:w-[250px]">
+    <section className="bg-contrast-strong h-screen w-52 md:w-[250px] scrollbar-main overflow-y-auto">
       <Link
         to="profile" onClick={toggle}
         className={`py-4 flex flex-col items-center cursor-pointer ${setFocus("/profile", pathname)}`}>
